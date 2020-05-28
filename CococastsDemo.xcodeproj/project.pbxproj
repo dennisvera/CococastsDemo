@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D8EF0D235136A5B9C73C4E2 /* Pods_CococastsDemo_CococastsDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D7B425C90E4A966F98CD5 /* Pods_CococastsDemo_CococastsDemoUITests.framework */; };
+		9CC1DF8CDDB42FD9FE976963 /* Pods_CococastsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05EE05BBD483626FE066A4F /* Pods_CococastsDemo.framework */; };
 		E1E59415247F022A0095143E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59414247F022A0095143E /* AppDelegate.swift */; };
 		E1E59417247F022A0095143E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59416247F022A0095143E /* SceneDelegate.swift */; };
 		E1E59419247F022A0095143E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59418247F022A0095143E /* ViewController.swift */; };
 		E1E5941C247F022A0095143E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E5941A247F022A0095143E /* Main.storyboard */; };
 		E1E5941E247F022B0095143E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E5941D247F022B0095143E /* Assets.xcassets */; };
 		E1E59421247F022B0095143E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E5941F247F022B0095143E /* LaunchScreen.storyboard */; };
-		E1E5942C247F022B0095143E /* CococastsDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5942B247F022B0095143E /* CococastsDemoTests.swift */; };
-		E1E59437247F022B0095143E /* CococastsDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59436247F022B0095143E /* CococastsDemoUITests.swift */; };
+		E42EB19DE3F3F5273E1871E1 /* Pods_CococastsDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160DF9412F2125CE94457FAC /* Pods_CococastsDemoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		160DF9412F2125CE94457FAC /* Pods_CococastsDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CococastsDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		392D7B425C90E4A966F98CD5 /* Pods_CococastsDemo_CococastsDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CococastsDemo_CococastsDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F38543A2992B709519B0E18 /* Pods-CococastsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CococastsDemo.release.xcconfig"; path = "Target Support Files/Pods-CococastsDemo/Pods-CococastsDemo.release.xcconfig"; sourceTree = "<group>"; };
+		5DBF6CEB916ABE4FCD44ED68 /* Pods-CococastsDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CococastsDemoTests.release.xcconfig"; path = "Target Support Files/Pods-CococastsDemoTests/Pods-CococastsDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		7BA79EC27E91A902EDFE98E8 /* Pods-CococastsDemo-CococastsDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CococastsDemo-CococastsDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-CococastsDemo-CococastsDemoUITests/Pods-CococastsDemo-CococastsDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AE92322144B18D91E1E0D629 /* Pods-CococastsDemo-CococastsDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CococastsDemo-CococastsDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-CococastsDemo-CococastsDemoUITests/Pods-CococastsDemo-CococastsDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DDDC51CF68574C3A6D6E440F /* Pods-CococastsDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CococastsDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-CococastsDemoTests/Pods-CococastsDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E05EE05BBD483626FE066A4F /* Pods_CococastsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CococastsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E59411247F022A0095143E /* CococastsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CococastsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E59414247F022A0095143E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1E59416247F022A0095143E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,13 +51,12 @@
 		E1E5941B247F022A0095143E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1E5941D247F022B0095143E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1E59420247F022B0095143E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E1E59422247F022B0095143E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1E59422247F022B0095143E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "CococastsDemo/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		E1E59427247F022B0095143E /* CococastsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CococastsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1E5942B247F022B0095143E /* CococastsDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CococastsDemoTests.swift; sourceTree = "<group>"; };
 		E1E5942D247F022B0095143E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E59432247F022B0095143E /* CococastsDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CococastsDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1E59436247F022B0095143E /* CococastsDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CococastsDemoUITests.swift; sourceTree = "<group>"; };
 		E1E59438247F022B0095143E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDAED6A49B28F19CA973BBA8 /* Pods-CococastsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CococastsDemo.debug.xcconfig"; path = "Target Support Files/Pods-CococastsDemo/Pods-CococastsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CC1DF8CDDB42FD9FE976963 /* Pods_CococastsDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42EB19DE3F3F5273E1871E1 /* Pods_CococastsDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +80,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D8EF0D235136A5B9C73C4E2 /* Pods_CococastsDemo_CococastsDemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B642FE724C6E29C1982C87ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E05EE05BBD483626FE066A4F /* Pods_CococastsDemo.framework */,
+				392D7B425C90E4A966F98CD5 /* Pods_CococastsDemo_CococastsDemoUITests.framework */,
+				160DF9412F2125CE94457FAC /* Pods_CococastsDemoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9FA262A1F921DD20FED1EA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FDAED6A49B28F19CA973BBA8 /* Pods-CococastsDemo.debug.xcconfig */,
+				3F38543A2992B709519B0E18 /* Pods-CococastsDemo.release.xcconfig */,
+				AE92322144B18D91E1E0D629 /* Pods-CococastsDemo-CococastsDemoUITests.debug.xcconfig */,
+				7BA79EC27E91A902EDFE98E8 /* Pods-CococastsDemo-CococastsDemoUITests.release.xcconfig */,
+				DDDC51CF68574C3A6D6E440F /* Pods-CococastsDemoTests.debug.xcconfig */,
+				5DBF6CEB916ABE4FCD44ED68 /* Pods-CococastsDemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E1E59408247F02290095143E = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +118,8 @@
 				E1E5942A247F022B0095143E /* CococastsDemoTests */,
 				E1E59435247F022B0095143E /* CococastsDemoUITests */,
 				E1E59412247F022A0095143E /* Products */,
+				C9FA262A1F921DD20FED1EA6 /* Pods */,
+				B642FE724C6E29C1982C87ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +136,12 @@
 		E1E59413247F022A0095143E /* CococastsDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E1E59414247F022A0095143E /* AppDelegate.swift */,
-				E1E59416247F022A0095143E /* SceneDelegate.swift */,
-				E1E59418247F022A0095143E /* ViewController.swift */,
-				E1E5941A247F022A0095143E /* Main.storyboard */,
-				E1E5941D247F022B0095143E /* Assets.xcassets */,
-				E1E5941F247F022B0095143E /* LaunchScreen.storyboard */,
-				E1E59422247F022B0095143E /* Info.plist */,
+				E1E59444247F024B0095143E /* Application Delegate */,
+				E1E59445247F02720095143E /* Scene Delegate */,
+				E1E59446247F02F20095143E /* View Controllers */,
+				E1E59447247F030F0095143E /* Storyboards */,
+				E1E59448247F03250095143E /* Resources */,
+				E1E59449247F03A40095143E /* Supporting Files */,
 			);
 			path = CococastsDemo;
 			sourceTree = "<group>";
@@ -113,8 +149,7 @@
 		E1E5942A247F022B0095143E /* CococastsDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				E1E5942B247F022B0095143E /* CococastsDemoTests.swift */,
-				E1E5942D247F022B0095143E /* Info.plist */,
+				E1E5944A247F08330095143E /* Supporting Files */,
 			);
 			path = CococastsDemoTests;
 			sourceTree = "<group>";
@@ -122,10 +157,82 @@
 		E1E59435247F022B0095143E /* CococastsDemoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E1E59436247F022B0095143E /* CococastsDemoUITests.swift */,
-				E1E59438247F022B0095143E /* Info.plist */,
+				E1E5944B247F083E0095143E /* Supporting Files */,
 			);
 			path = CococastsDemoUITests;
+			sourceTree = "<group>";
+		};
+		E1E59444247F024B0095143E /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				E1E59414247F022A0095143E /* AppDelegate.swift */,
+			);
+			path = "Application Delegate";
+			sourceTree = "<group>";
+		};
+		E1E59445247F02720095143E /* Scene Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				E1E59416247F022A0095143E /* SceneDelegate.swift */,
+			);
+			path = "Scene Delegate";
+			sourceTree = "<group>";
+		};
+		E1E59446247F02F20095143E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1E59418247F022A0095143E /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E1E59447247F030F0095143E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E1E5941A247F022A0095143E /* Main.storyboard */,
+				E1E5941F247F022B0095143E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E1E59448247F03250095143E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E1E5948F24800C490095143E /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E1E59449247F03A40095143E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1E59422247F022B0095143E /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1E5944A247F08330095143E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1E5942D247F022B0095143E /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1E5944B247F083E0095143E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1E59438247F022B0095143E /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1E5948F24800C490095143E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E1E5941D247F022B0095143E /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1E5943B247F022B0095143E /* Build configuration list for PBXNativeTarget "CococastsDemo" */;
 			buildPhases = (
+				605438292B355C549DB6887C /* [CP] Check Pods Manifest.lock */,
 				E1E5940D247F022A0095143E /* Sources */,
 				E1E5940E247F022A0095143E /* Frameworks */,
 				E1E5940F247F022A0095143E /* Resources */,
+				4754DB0B1A5B98E43B59D616 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +261,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1E5943E247F022B0095143E /* Build configuration list for PBXNativeTarget "CococastsDemoTests" */;
 			buildPhases = (
+				387A056193588BB4887F820E /* [CP] Check Pods Manifest.lock */,
 				E1E59423247F022B0095143E /* Sources */,
 				E1E59424247F022B0095143E /* Frameworks */,
 				E1E59425247F022B0095143E /* Resources */,
@@ -170,9 +280,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1E59441247F022B0095143E /* Build configuration list for PBXNativeTarget "CococastsDemoUITests" */;
 			buildPhases = (
+				949EB71E6270A2615AF96C59 /* [CP] Check Pods Manifest.lock */,
 				E1E5942E247F022B0095143E /* Sources */,
 				E1E5942F247F022B0095143E /* Frameworks */,
 				E1E59430247F022B0095143E /* Resources */,
+				90E3B8AA148C70AD584C39F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,6 +366,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		387A056193588BB4887F820E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CococastsDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4754DB0B1A5B98E43B59D616 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CococastsDemo/Pods-CococastsDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CococastsDemo/Pods-CococastsDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CococastsDemo/Pods-CococastsDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		605438292B355C549DB6887C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CococastsDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90E3B8AA148C70AD584C39F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CococastsDemo-CococastsDemoUITests/Pods-CococastsDemo-CococastsDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CococastsDemo-CococastsDemoUITests/Pods-CococastsDemo-CococastsDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CococastsDemo-CococastsDemoUITests/Pods-CococastsDemo-CococastsDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		949EB71E6270A2615AF96C59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CococastsDemo-CococastsDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E1E5940D247F022A0095143E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -269,7 +484,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E5942C247F022B0095143E /* CococastsDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +491,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E59437247F022B0095143E /* CococastsDemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,11 +645,12 @@
 		};
 		E1E5943C247F022B0095143E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDAED6A49B28F19CA973BBA8 /* Pods-CococastsDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B426D3XC5Q;
-				INFOPLIST_FILE = CococastsDemo/Info.plist;
+				INFOPLIST_FILE = "/Users/dennisvera/Development/Cocoacasts/CococastsDemo/CococastsDemo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,11 +664,12 @@
 		};
 		E1E5943D247F022B0095143E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F38543A2992B709519B0E18 /* Pods-CococastsDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B426D3XC5Q;
-				INFOPLIST_FILE = CococastsDemo/Info.plist;
+				INFOPLIST_FILE = "/Users/dennisvera/Development/Cocoacasts/CococastsDemo/CococastsDemo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,6 +683,7 @@
 		};
 		E1E5943F247F022B0095143E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDDC51CF68574C3A6D6E440F /* Pods-CococastsDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +706,7 @@
 		};
 		E1E59440247F022B0095143E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DBF6CEB916ABE4FCD44ED68 /* Pods-CococastsDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +729,7 @@
 		};
 		E1E59442247F022B0095143E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE92322144B18D91E1E0D629 /* Pods-CococastsDemo-CococastsDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +750,7 @@
 		};
 		E1E59443247F022B0095143E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BA79EC27E91A902EDFE98E8 /* Pods-CococastsDemo-CococastsDemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
