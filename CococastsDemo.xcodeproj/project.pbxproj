@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,10 +11,15 @@
 		9CC1DF8CDDB42FD9FE976963 /* Pods_CococastsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05EE05BBD483626FE066A4F /* Pods_CococastsDemo.framework */; };
 		E1E59415247F022A0095143E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59414247F022A0095143E /* AppDelegate.swift */; };
 		E1E59417247F022A0095143E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59416247F022A0095143E /* SceneDelegate.swift */; };
-		E1E59419247F022A0095143E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59418247F022A0095143E /* ViewController.swift */; };
 		E1E5941C247F022A0095143E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E5941A247F022A0095143E /* Main.storyboard */; };
 		E1E5941E247F022B0095143E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E5941D247F022B0095143E /* Assets.xcassets */; };
 		E1E59421247F022B0095143E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E5941F247F022B0095143E /* LaunchScreen.storyboard */; };
+		E1E5949B24804E740095143E /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E5949A24804E740095143E /* Root.storyboard */; };
+		E1E5949D24804E980095143E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5949C24804E980095143E /* RootViewController.swift */; };
+		E1E594A6248050E00095143E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594A5248050E00095143E /* FeedViewController.swift */; };
+		E1E594A8248051AB0095143E /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E594A7248051AB0095143E /* Feed.storyboard */; };
+		E1E594AD248053630095143E /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594AC248053630095143E /* LibraryViewController.swift */; };
+		E1E594AF2480536F0095143E /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E594AE2480536F0095143E /* Library.storyboard */; };
 		E42EB19DE3F3F5273E1871E1 /* Pods_CococastsDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160DF9412F2125CE94457FAC /* Pods_CococastsDemoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +52,6 @@
 		E1E59411247F022A0095143E /* CococastsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CococastsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E59414247F022A0095143E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1E59416247F022A0095143E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E1E59418247F022A0095143E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E1E5941B247F022A0095143E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1E5941D247F022B0095143E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1E59420247F022B0095143E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +60,12 @@
 		E1E5942D247F022B0095143E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E59432247F022B0095143E /* CococastsDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CococastsDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E59438247F022B0095143E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1E5949A24804E740095143E /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		E1E5949C24804E980095143E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		E1E594A5248050E00095143E /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		E1E594A7248051AB0095143E /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		E1E594AC248053630095143E /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		E1E594AE2480536F0095143E /* Library.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
 		FDAED6A49B28F19CA973BBA8 /* Pods-CococastsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CococastsDemo.debug.xcconfig"; path = "Target Support Files/Pods-CococastsDemo/Pods-CococastsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,7 +117,6 @@
 				DDDC51CF68574C3A6D6E440F /* Pods-CococastsDemoTests.debug.xcconfig */,
 				5DBF6CEB916ABE4FCD44ED68 /* Pods-CococastsDemoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -138,6 +147,7 @@
 			children = (
 				E1E59444247F024B0095143E /* Application Delegate */,
 				E1E59445247F02720095143E /* Scene Delegate */,
+				E1E594A0248050430095143E /* Modules */,
 				E1E59446247F02F20095143E /* View Controllers */,
 				E1E59447247F030F0095143E /* Storyboards */,
 				E1E59448247F03250095143E /* Resources */,
@@ -181,7 +191,7 @@
 		E1E59446247F02F20095143E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E1E59418247F022A0095143E /* ViewController.swift */,
+				E1E5949624804DFB0095143E /* Root View Controller */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -191,6 +201,7 @@
 			children = (
 				E1E5941A247F022A0095143E /* Main.storyboard */,
 				E1E5941F247F022B0095143E /* LaunchScreen.storyboard */,
+				E1E5949A24804E740095143E /* Root.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -235,6 +246,73 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		E1E5949624804DFB0095143E /* Root View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E1E5949C24804E980095143E /* RootViewController.swift */,
+			);
+			path = "Root View Controller";
+			sourceTree = "<group>";
+		};
+		E1E594A0248050430095143E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E1E594A92480531A0095143E /* Library */,
+				E1E594A22480508A0095143E /* Feed */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E1E594A22480508A0095143E /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				E1E594A4248050A80095143E /* View Controllers */,
+				E1E594A32480509A0095143E /* Storyboards */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		E1E594A32480509A0095143E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E1E594A7248051AB0095143E /* Feed.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E1E594A4248050A80095143E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1E594A5248050E00095143E /* FeedViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E1E594A92480531A0095143E /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				E1E594AB2480532C0095143E /* View Controllers */,
+				E1E594AA248053230095143E /* Storyboards */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		E1E594AA248053230095143E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E1E594AE2480536F0095143E /* Library.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E1E594AB2480532C0095143E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1E594AC248053630095143E /* LibraryViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -246,7 +324,6 @@
 				E1E5940D247F022A0095143E /* Sources */,
 				E1E5940E247F022A0095143E /* Frameworks */,
 				E1E5940F247F022A0095143E /* Resources */,
-				4754DB0B1A5B98E43B59D616 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,7 +361,6 @@
 				E1E5942E247F022B0095143E /* Sources */,
 				E1E5942F247F022B0095143E /* Frameworks */,
 				E1E59430247F022B0095143E /* Resources */,
-				90E3B8AA148C70AD584C39F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -344,8 +420,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1E594A8248051AB0095143E /* Feed.storyboard in Resources */,
 				E1E59421247F022B0095143E /* LaunchScreen.storyboard in Resources */,
 				E1E5941E247F022B0095143E /* Assets.xcassets in Resources */,
+				E1E5949B24804E740095143E /* Root.storyboard in Resources */,
+				E1E594AF2480536F0095143E /* Library.storyboard in Resources */,
 				E1E5941C247F022A0095143E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,23 +468,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4754DB0B1A5B98E43B59D616 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CococastsDemo/Pods-CococastsDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CococastsDemo/Pods-CococastsDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CococastsDemo/Pods-CococastsDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		605438292B355C549DB6887C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -426,23 +488,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		90E3B8AA148C70AD584C39F2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CococastsDemo-CococastsDemoUITests/Pods-CococastsDemo-CococastsDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CococastsDemo-CococastsDemoUITests/Pods-CococastsDemo-CococastsDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CococastsDemo-CococastsDemoUITests/Pods-CococastsDemo-CococastsDemoUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		949EB71E6270A2615AF96C59 /* [CP] Check Pods Manifest.lock */ = {
@@ -474,9 +519,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E59419247F022A0095143E /* ViewController.swift in Sources */,
 				E1E59415247F022A0095143E /* AppDelegate.swift in Sources */,
+				E1E594AD248053630095143E /* LibraryViewController.swift in Sources */,
 				E1E59417247F022A0095143E /* SceneDelegate.swift in Sources */,
+				E1E594A6248050E00095143E /* FeedViewController.swift in Sources */,
+				E1E5949D24804E980095143E /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
