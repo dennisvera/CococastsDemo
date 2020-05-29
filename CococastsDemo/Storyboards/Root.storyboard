@@ -10,7 +10,7 @@
         <!--Root View Controller-->
         <scene sceneID="403-hW-4D8">
             <objects>
-                <viewController id="F2l-Xx-x2H" customClass="RootViewController" customModule="CococastsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RootViewController" id="F2l-Xx-x2H" customClass="RootViewController" customModule="CococastsDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jOe-oM-vgr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

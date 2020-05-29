@@ -8,7 +8,13 @@
 
 import UIKit
 
-class FeedViewController: UIViewController {
+class FeedViewController: UIViewController, Storyboardable {
+    
+     // MARK: - Storyboardable
+    
+    static var storyboardName: String {
+        return "Feed"
+    }
     
     // MARK: - Initialization
     

@@ -11,7 +11,6 @@
 		9CC1DF8CDDB42FD9FE976963 /* Pods_CococastsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05EE05BBD483626FE066A4F /* Pods_CococastsDemo.framework */; };
 		E1E59415247F022A0095143E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59414247F022A0095143E /* AppDelegate.swift */; };
 		E1E59417247F022A0095143E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59416247F022A0095143E /* SceneDelegate.swift */; };
-		E1E5941C247F022A0095143E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E5941A247F022A0095143E /* Main.storyboard */; };
 		E1E5941E247F022B0095143E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E5941D247F022B0095143E /* Assets.xcassets */; };
 		E1E59421247F022B0095143E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E5941F247F022B0095143E /* LaunchScreen.storyboard */; };
 		E1E5949B24804E740095143E /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E5949A24804E740095143E /* Root.storyboard */; };
@@ -22,6 +21,11 @@
 		E1E594AF2480536F0095143E /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E594AE2480536F0095143E /* Library.storyboard */; };
 		E1E594BA2480A6CE0095143E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594B92480A6CE0095143E /* Logger.swift */; };
 		E1E594BE2480AB1A0095143E /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594BD2480AB1A0095143E /* LogFormatter.swift */; };
+		E1E594C32481572F0095143E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594C22481572F0095143E /* Coordinator.swift */; };
+		E1E594C9248158420095143E /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594C8248158420095143E /* Storyboardable.swift */; };
+		E1E594CD24815C5F0095143E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594CC24815C5F0095143E /* AppCoordinator.swift */; };
+		E1E594D3248168710095143E /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594D2248168710095143E /* FeedCoordinator.swift */; };
+		E1E594D52481694A0095143E /* LibraryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594D42481694A0095143E /* LibraryCoordinator.swift */; };
 		E42EB19DE3F3F5273E1871E1 /* Pods_CococastsDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160DF9412F2125CE94457FAC /* Pods_CococastsDemoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +58,6 @@
 		E1E59411247F022A0095143E /* CococastsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CococastsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E59414247F022A0095143E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1E59416247F022A0095143E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E1E5941B247F022A0095143E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1E5941D247F022B0095143E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1E59420247F022B0095143E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1E59422247F022B0095143E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "CococastsDemo/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -70,6 +73,11 @@
 		E1E594AE2480536F0095143E /* Library.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
 		E1E594B92480A6CE0095143E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		E1E594BD2480AB1A0095143E /* LogFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFormatter.swift; sourceTree = "<group>"; };
+		E1E594C22481572F0095143E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E1E594C8248158420095143E /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
+		E1E594CC24815C5F0095143E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		E1E594D2248168710095143E /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
+		E1E594D42481694A0095143E /* LibraryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCoordinator.swift; sourceTree = "<group>"; };
 		FDAED6A49B28F19CA973BBA8 /* Pods-CococastsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CococastsDemo.debug.xcconfig"; path = "Target Support Files/Pods-CococastsDemo/Pods-CococastsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,12 +157,14 @@
 		E1E59413247F022A0095143E /* CococastsDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E1E594B52480A6630095143E /* Debugging */,
 				E1E59444247F024B0095143E /* Application Delegate */,
 				E1E59445247F02720095143E /* Scene Delegate */,
-				E1E594A0248050430095143E /* Modules */,
 				E1E59446247F02F20095143E /* View Controllers */,
+				E1E594A0248050430095143E /* Modules */,
+				E1E594C1248156FB0095143E /* Coordinator */,
+				E1E594C7248158040095143E /* Protocols */,
 				E1E59447247F030F0095143E /* Storyboards */,
+				E1E594B52480A6630095143E /* Debugging */,
 				E1E59448247F03250095143E /* Resources */,
 				E1E59449247F03A40095143E /* Supporting Files */,
 			);
@@ -204,7 +214,6 @@
 		E1E59447247F030F0095143E /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				E1E5941A247F022A0095143E /* Main.storyboard */,
 				E1E5941F247F022B0095143E /* LaunchScreen.storyboard */,
 				E1E5949A24804E740095143E /* Root.storyboard */,
 			);
@@ -262,8 +271,8 @@
 		E1E594A0248050430095143E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				E1E594A92480531A0095143E /* Library */,
 				E1E594A22480508A0095143E /* Feed */,
+				E1E594A92480531A0095143E /* Library */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -333,6 +342,41 @@
 				E1E594BD2480AB1A0095143E /* LogFormatter.swift */,
 			);
 			path = Logging;
+			sourceTree = "<group>";
+		};
+		E1E594C1248156FB0095143E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				E1E594C22481572F0095143E /* Coordinator.swift */,
+				E1E594CA24815C310095143E /* Application Coordinator */,
+				E1E594D1248168570095143E /* Child Coordinator */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		E1E594C7248158040095143E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E1E594C8248158420095143E /* Storyboardable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E1E594CA24815C310095143E /* Application Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				E1E594CC24815C5F0095143E /* AppCoordinator.swift */,
+			);
+			path = "Application Coordinator";
+			sourceTree = "<group>";
+		};
+		E1E594D1248168570095143E /* Child Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				E1E594D2248168710095143E /* FeedCoordinator.swift */,
+				E1E594D42481694A0095143E /* LibraryCoordinator.swift */,
+			);
+			path = "Child Coordinator";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,7 +493,6 @@
 				E1E5941E247F022B0095143E /* Assets.xcassets in Resources */,
 				E1E5949B24804E740095143E /* Root.storyboard in Resources */,
 				E1E594AF2480536F0095143E /* Library.storyboard in Resources */,
-				E1E5941C247F022A0095143E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,12 +620,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1E594D52481694A0095143E /* LibraryCoordinator.swift in Sources */,
+				E1E594C32481572F0095143E /* Coordinator.swift in Sources */,
 				E1E59415247F022A0095143E /* AppDelegate.swift in Sources */,
+				E1E594CD24815C5F0095143E /* AppCoordinator.swift in Sources */,
 				E1E594BA2480A6CE0095143E /* Logger.swift in Sources */,
 				E1E594AD248053630095143E /* LibraryViewController.swift in Sources */,
 				E1E594BE2480AB1A0095143E /* LogFormatter.swift in Sources */,
 				E1E59417247F022A0095143E /* SceneDelegate.swift in Sources */,
+				E1E594D3248168710095143E /* FeedCoordinator.swift in Sources */,
 				E1E594A6248050E00095143E /* FeedViewController.swift in Sources */,
+				E1E594C9248158420095143E /* Storyboardable.swift in Sources */,
 				E1E5949D24804E980095143E /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,14 +665,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E1E5941A247F022A0095143E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E1E5941B247F022A0095143E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E1E5941F247F022B0095143E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -10,12 +10,29 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    // MARK: - Properties
+    
     var window: UIWindow?
     
+    private var appCoordinator = AppCooordinator()
+    
     // MARK: - Application Life Cycle
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let _ = (scene as? UIWindowScene) else { return }
+        // Initialize Scene
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        // Initialize Window
+        window = UIWindow(windowScene: windowScene)
+        
+        // Configure Window
+        window?.rootViewController = appCoordinator.rootViewController
+        
+        // Make Key and Visible
+        window?.makeKeyAndVisible()
+        
+        // Start Coordinator
+        appCoordinator.start()
         
         // Setup Logging
         Logger.setup()

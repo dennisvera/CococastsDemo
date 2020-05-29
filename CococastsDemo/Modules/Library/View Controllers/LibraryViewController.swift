@@ -8,7 +8,13 @@
 
 import UIKit
 
-class LibraryViewController: UIViewController {
+class LibraryViewController: UIViewController, Storyboardable {
+    
+     // MARK: - Storyboardable
+    
+    static var storyboardName: String {
+        return "Library"
+    }
 
     // MARK: - Initialization
     

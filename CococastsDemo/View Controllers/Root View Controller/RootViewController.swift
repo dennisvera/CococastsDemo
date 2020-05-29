@@ -8,43 +8,55 @@
 
 import UIKit
 
-class RootViewController: UIViewController {
+class RootViewController: UIViewController, Storyboardable {
+    
+    // MARK: - Storyboardable
+    
+    static var storyboardName: String {
+        return "Root"
+    }
     
     // MARK: - Properties
     
-    private lazy var baseTabBarController: UITabBarController = {
-        guard let tabBarController = UIStoryboard(name: "Main",
-                                                  bundle: .main).instantiateInitialViewController() as? UITabBarController else {
-                                                    fatalError("Unable to Instantiate Tab Bar Controller")
+    var childViewController: UIViewController? {
+        didSet {
+            // Replace Child View Controller
+            replace(viewController: oldValue, with: childViewController)
         }
-        return tabBarController
-    }()
+    }
     
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Setup Child View Controllers
-        setupChildViewControllers()
     }
     
     // MARK: - Helper Methods
     
-    private func setupChildViewControllers() {
-        // Add Child View Controller
-        addChild(baseTabBarController)
+    private func replace(viewController from: UIViewController?, with to: UIViewController?) {
+        if let viewController = from {
+            // Remove Child View From Superview
+            viewController.view.removeFromSuperview()
+            
+            // Notify Child View Controller
+            viewController.didMove(toParent: nil)
+        }
         
-        // Add Child View as Subview
-        view.addSubview(baseTabBarController.view)
-
-        // Configure Child View
-        baseTabBarController.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        baseTabBarController.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        baseTabBarController.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        baseTabBarController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        
-        // Notify Child View Controller
-        baseTabBarController.didMove(toParent: self)
+        if let viewController = to {
+            // Add Child View Controller
+            addChild(viewController)
+            
+            // Add Child View as Subview
+            view.addSubview(viewController.view)
+            
+            // Configure Child View
+            viewController.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+            viewController.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+            viewController.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+            viewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+            
+            // Notify Child View Controller
+            viewController.didMove(toParent: self)
+        }
     }
 }
