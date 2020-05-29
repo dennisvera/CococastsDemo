@@ -20,6 +20,8 @@
 		E1E594A8248051AB0095143E /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E594A7248051AB0095143E /* Feed.storyboard */; };
 		E1E594AD248053630095143E /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594AC248053630095143E /* LibraryViewController.swift */; };
 		E1E594AF2480536F0095143E /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E594AE2480536F0095143E /* Library.storyboard */; };
+		E1E594BA2480A6CE0095143E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594B92480A6CE0095143E /* Logger.swift */; };
+		E1E594BE2480AB1A0095143E /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594BD2480AB1A0095143E /* LogFormatter.swift */; };
 		E42EB19DE3F3F5273E1871E1 /* Pods_CococastsDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160DF9412F2125CE94457FAC /* Pods_CococastsDemoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		E1E594A7248051AB0095143E /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		E1E594AC248053630095143E /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		E1E594AE2480536F0095143E /* Library.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
+		E1E594B92480A6CE0095143E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		E1E594BD2480AB1A0095143E /* LogFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFormatter.swift; sourceTree = "<group>"; };
 		FDAED6A49B28F19CA973BBA8 /* Pods-CococastsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CococastsDemo.debug.xcconfig"; path = "Target Support Files/Pods-CococastsDemo/Pods-CococastsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +149,7 @@
 		E1E59413247F022A0095143E /* CococastsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E1E594B52480A6630095143E /* Debugging */,
 				E1E59444247F024B0095143E /* Application Delegate */,
 				E1E59445247F02720095143E /* Scene Delegate */,
 				E1E594A0248050430095143E /* Modules */,
@@ -313,6 +318,23 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		E1E594B52480A6630095143E /* Debugging */ = {
+			isa = PBXGroup;
+			children = (
+				E1E594B62480A6810095143E /* Logging */,
+			);
+			path = Debugging;
+			sourceTree = "<group>";
+		};
+		E1E594B62480A6810095143E /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				E1E594B92480A6CE0095143E /* Logger.swift */,
+				E1E594BD2480AB1A0095143E /* LogFormatter.swift */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -324,6 +346,7 @@
 				E1E5940D247F022A0095143E /* Sources */,
 				E1E5940E247F022A0095143E /* Frameworks */,
 				E1E5940F247F022A0095143E /* Resources */,
+				BDF15D8CC50191860054B1EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -361,6 +384,7 @@
 				E1E5942E247F022B0095143E /* Sources */,
 				E1E5942F247F022B0095143E /* Frameworks */,
 				E1E59430247F022B0095143E /* Resources */,
+				DB1931790D0CC04F92BD23E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -512,6 +536,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BDF15D8CC50191860054B1EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CococastsDemo/Pods-CococastsDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CococastsDemo/Pods-CococastsDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CococastsDemo/Pods-CococastsDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB1931790D0CC04F92BD23E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CococastsDemo-CococastsDemoUITests/Pods-CococastsDemo-CococastsDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CococastsDemo-CococastsDemoUITests/Pods-CococastsDemo-CococastsDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CococastsDemo-CococastsDemoUITests/Pods-CococastsDemo-CococastsDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -520,7 +578,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E59415247F022A0095143E /* AppDelegate.swift in Sources */,
+				E1E594BA2480A6CE0095143E /* Logger.swift in Sources */,
 				E1E594AD248053630095143E /* LibraryViewController.swift in Sources */,
+				E1E594BE2480AB1A0095143E /* LogFormatter.swift in Sources */,
 				E1E59417247F022A0095143E /* SceneDelegate.swift in Sources */,
 				E1E594A6248050E00095143E /* FeedViewController.swift in Sources */,
 				E1E5949D24804E980095143E /* RootViewController.swift in Sources */,
