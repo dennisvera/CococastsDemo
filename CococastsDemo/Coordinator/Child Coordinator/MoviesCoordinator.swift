@@ -1,5 +1,5 @@
 //
-//  FeedCoordinator.swift
+//  MoviesCoordinator.swift
 //  CococastsDemo
 //
 //  Created by Dennis Vera on 5/29/20.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class FeedCoordinator: Coordinator {
+class MoviesCoordinator: Coordinator {
     
     // MARK: - Properties
     
     var rootViewController: UIViewController {
-        return feedViewController
+        return moviesViewController
     }
     
-    private let feedViewController = FeedViewController.instantiate()
+    private let moviesViewController = MoviesViewController.instantiate()
 }

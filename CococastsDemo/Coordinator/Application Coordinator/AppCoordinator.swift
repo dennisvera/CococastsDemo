@@ -19,18 +19,18 @@ class AppCooordinator: Coordinator {
         let tabBarController = UITabBarController()
         
          // Initialize Child Coordinators
-        let feedCoordinator = FeedCoordinator()
-        let libraryCoordinator = LibraryCoordinator()
+        let nowPlayingCoordinator = NowPlayingCoordinator()
+        let moviesCoordinator = MoviesCoordinator()
         
         // Update View Controllers
         tabBarController.viewControllers = [
-            feedCoordinator.rootViewController,
-            libraryCoordinator.rootViewController
+            nowPlayingCoordinator.rootViewController,
+            moviesCoordinator.rootViewController
         ]
         
         // Append to Child Coordinators
-        childCoordinators.append(feedCoordinator)
-        childCoordinators.append(libraryCoordinator)
+        childCoordinators.append(nowPlayingCoordinator)
+        childCoordinators.append(moviesCoordinator)
         
         return tabBarController
     }()

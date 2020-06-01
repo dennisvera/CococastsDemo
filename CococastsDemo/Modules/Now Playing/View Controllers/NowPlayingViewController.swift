@@ -1,5 +1,5 @@
 //
-//  FeedViewController.swift
+//  NowPlayingViewController.swift
 //  CococastsDemo
 //
 //  Created by Dennis Vera on 5/28/20.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class FeedViewController: UIViewController, Storyboardable {
+class NowPlayingViewController: UIViewController, Storyboardable {
     
      // MARK: - Storyboardable
     
     static var storyboardName: String {
-        return "Feed"
+        return "NowPlaying"
     }
     
     // MARK: - Initialization
@@ -22,6 +22,6 @@ class FeedViewController: UIViewController, Storyboardable {
         super.init(coder: coder)
         
         // Set Title
-        title = "Feed"
+        title = "Now Playing"
     }
 }

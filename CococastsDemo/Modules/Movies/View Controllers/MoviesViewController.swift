@@ -1,5 +1,5 @@
 //
-//  LibraryViewController.swift
+//  MoviesViewController.swift
 //  CococastsDemo
 //
 //  Created by Dennis Vera on 5/28/20.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class LibraryViewController: UIViewController, Storyboardable {
+class MoviesViewController: UIViewController, Storyboardable {
     
      // MARK: - Storyboardable
     
     static var storyboardName: String {
-        return "Library"
+        return "Movies"
     }
 
     // MARK: - Initialization
@@ -22,6 +22,6 @@ class LibraryViewController: UIViewController, Storyboardable {
         super.init(coder: coder)
         
         // Set Title
-        title = "Library"
+        title = "Movies"
     }
 }
