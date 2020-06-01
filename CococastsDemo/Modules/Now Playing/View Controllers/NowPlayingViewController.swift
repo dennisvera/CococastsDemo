@@ -9,19 +9,23 @@
 import UIKit
 
 class NowPlayingViewController: UIViewController, Storyboardable {
+  
+  // MARK: - Storyboardable
+  
+  static var storyboardName: String {
+    return "NowPlaying"
+  }
+  
+  // MARK: - Properties
+  
+  var viewModel: NowPlayingViewModel?
+  
+  // MARK: - Initialization
+  
+  required init?(coder: NSCoder) {
+    super.init(coder: coder)
     
-     // MARK: - Storyboardable
-    
-    static var storyboardName: String {
-        return "NowPlaying"
-    }
-    
-    // MARK: - Initialization
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        
-        // Set Title
-        title = "Now Playing"
-    }
+    // Set Title
+    title = "Now Playing"
+  }
 }

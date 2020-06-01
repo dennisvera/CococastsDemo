@@ -9,12 +9,25 @@
 import UIKit
 
 class NowPlayingCoordinator: Coordinator {
+  
+  // MARK: - Properties
+  
+  var rootViewController: UIViewController {
+    return nowPlayingViewController
+  }
+  
+  private lazy var nowPlayingViewController: NowPlayingViewController = {
+     // Initialize API Client
+    let apiClient = APIClient()
     
-     // MARK: - Properties
+    // Initialize Now Playing View Model
+    let viewModel = NowPlayingViewModel(apiClient: apiClient)
     
-    var rootViewController: UIViewController {
-        return nowPlayingViewController
-    }
+     // Initialize Now Playing View Controller
+    let nowPlayingViewController = NowPlayingViewController.instantiate()
+    // Configure Now Playing View Controller
+    nowPlayingViewController.viewModel = viewModel
     
-    private let nowPlayingViewController = NowPlayingViewController.instantiate()
+    return nowPlayingViewController
+  }()
 }
