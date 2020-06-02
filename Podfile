@@ -5,6 +5,9 @@ target 'CococastsDemo' do
   # Debugging
   pod 'CocoaLumberjack/Swift'
 
+  # SDWebImage
+  pod 'SDWebImage', '~> 5.8.0'
+
   target 'CococastsDemoTests' do
     inherit! :search_paths
   end

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class NowPlayingCollectionViewCell: UICollectionViewCell {
   
@@ -24,6 +25,8 @@ class NowPlayingCollectionViewCell: UICollectionViewCell {
   // MARK: - Public API
   
   func configure(with presentable: NowPlayingPresentable) {
+    let imageBaseUrl = "https://image.tmdb.org/t/p/w200/"
+    imageView.sd_setImage(with: URL(string: imageBaseUrl + presentable.posterPath.absoluteString))
     titleLabel.text = presentable.title
   }
 }
