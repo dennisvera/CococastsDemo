@@ -23,8 +23,8 @@ class NowPlayingViewController: UIViewController, Storyboardable {
       collectionView.dataSource = self
       
       // Register Movie Collection View Cell
-      let xib = UINib(nibName: MovieCollectionViewCell.nibName, bundle: .main)
-      collectionView.register(xib, forCellWithReuseIdentifier: MovieCollectionViewCell.reuseIdentifier)
+      let xib = UINib(nibName: NowPlayingCollectionViewCell.nibName, bundle: .main)
+      collectionView.register(xib, forCellWithReuseIdentifier: NowPlayingCollectionViewCell.reuseIdentifier)
     }
   }
   
@@ -72,14 +72,14 @@ extension NowPlayingViewController: UICollectionViewDataSource {
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    // Fetch Movies
-    guard let movies = viewModel?.movies(at: indexPath.item) else { fatalError("No Movies Available.") }
+    // Fetch Presentable
+    guard let presentable = viewModel?.presentable(for: indexPath.item) else { fatalError("No Movies Available.") }
     
     // Dequeue Movie Collection View Cell
-    let cell: MovieCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+    let cell: NowPlayingCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
     
     // Configure Cell
-    cell.titleLabel.text = movies.title
+    cell.configure(with: presentable)
     
     return cell
   }
@@ -99,5 +99,4 @@ extension NowPlayingViewController: UICollectionViewDelegate, UICollectionViewDe
                       minimumLineSpacingForSectionAt section: Int) -> CGFloat {
     return 20.0
   }
-  
 }
