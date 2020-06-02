@@ -14,13 +14,35 @@
                     <view key="view" contentMode="scaleToFill" id="TzG-EN-98x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wT3-nk-pPu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h6h-Nb-aqS">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wT3-nk-pPu" firstAttribute="top" secondItem="TzG-EN-98x" secondAttribute="top" id="IPn-s7-DdY"/>
+                            <constraint firstItem="wT3-nk-pPu" firstAttribute="leading" secondItem="TzG-EN-98x" secondAttribute="leading" id="gGM-i3-EOF"/>
+                            <constraint firstAttribute="bottom" secondItem="wT3-nk-pPu" secondAttribute="bottom" id="ie8-AM-mcR"/>
+                            <constraint firstAttribute="trailing" secondItem="wT3-nk-pPu" secondAttribute="trailing" id="q1s-Wt-39d"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XHg-Kq-zmJ"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="wT3-nk-pPu" id="T86-QH-6Yf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ow4-Hj-my1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="84" y="156"/>
+            <point key="canvasLocation" x="82.608695652173921" y="155.35714285714286"/>
         </scene>
     </scenes>
 </document>
