@@ -35,6 +35,11 @@
 		E1FF4AE52485B1BB00FF2FD2 /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AE42485B1BB00FF2FD2 /* UICollectionView+Helpers.swift */; };
 		E1FF4AE72485B74800FF2FD2 /* UICollectionViewCell+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AE62485B74800FF2FD2 /* UICollectionViewCell+Helpers.swift */; };
 		E1FF4AF32486A21500FF2FD2 /* NowPlayingPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AF22486A21500FF2FD2 /* NowPlayingPresentable.swift */; };
+		E1FF4AF92486FC8B00FF2FD2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AF82486FC8B00FF2FD2 /* UIColor.swift */; };
+		E1FF4AFE2487003300FF2FD2 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1FF4AFB2487003300FF2FD2 /* Lato-Bold.ttf */; };
+		E1FF4AFF2487003300FF2FD2 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1FF4AFC2487003300FF2FD2 /* Lato-Light.ttf */; };
+		E1FF4B002487003300FF2FD2 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1FF4AFD2487003300FF2FD2 /* Lato-Regular.ttf */; };
+		E1FF4B0424870B2200FF2FD2 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B0324870B2200FF2FD2 /* Typography.swift */; };
 		E42EB19DE3F3F5273E1871E1 /* Pods_CococastsDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160DF9412F2125CE94457FAC /* Pods_CococastsDemoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +101,11 @@
 		E1FF4AE42485B1BB00FF2FD2 /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
 		E1FF4AE62485B74800FF2FD2 /* UICollectionViewCell+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Helpers.swift"; sourceTree = "<group>"; };
 		E1FF4AF22486A21500FF2FD2 /* NowPlayingPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingPresentable.swift; sourceTree = "<group>"; };
+		E1FF4AF82486FC8B00FF2FD2 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		E1FF4AFB2487003300FF2FD2 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		E1FF4AFC2487003300FF2FD2 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		E1FF4AFD2487003300FF2FD2 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		E1FF4B0324870B2200FF2FD2 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		FDAED6A49B28F19CA973BBA8 /* Pods-CococastsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CococastsDemo.debug.xcconfig"; path = "Target Support Files/Pods-CococastsDemo/Pods-CococastsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,14 +188,15 @@
 				E1E59444247F024B0095143E /* Application Delegate */,
 				E1E59445247F02720095143E /* Scene Delegate */,
 				E1E59446247F02F20095143E /* View Controllers */,
-				E1E594C1248156FB0095143E /* Coordinator */,
+				E1FF4AF62486FBC700FF2FD2 /* Miscellaneous */,
+				E1E594C1248156FB0095143E /* Coordinators */,
+				E1E59447247F030F0095143E /* Storyboards */,
 				E1FF4AC624856DBD00FF2FD2 /* Networking */,
+				E1E594B52480A6630095143E /* Debugging */,
+				E1FF4AE12485B16200FF2FD2 /* Extensions */,
+				E1E594C7248158040095143E /* Protocols */,
 				E1E594A0248050430095143E /* Modules */,
 				E1FF4AC3248565D900FF2FD2 /* Models */,
-				E1E594C7248158040095143E /* Protocols */,
-				E1FF4AE12485B16200FF2FD2 /* Extensions */,
-				E1E59447247F030F0095143E /* Storyboards */,
-				E1E594B52480A6630095143E /* Debugging */,
 				E1E59448247F03250095143E /* Resources */,
 				E1E59449247F03A40095143E /* Supporting Files */,
 			);
@@ -245,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				E1E5948F24800C490095143E /* Assets */,
+				E1FF4AFA2486FDD600FF2FD2 /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -367,14 +379,14 @@
 			path = Logging;
 			sourceTree = "<group>";
 		};
-		E1E594C1248156FB0095143E /* Coordinator */ = {
+		E1E594C1248156FB0095143E /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
 				E1E594C22481572F0095143E /* Coordinator.swift */,
 				E1E594CA24815C310095143E /* Application Coordinator */,
 				E1E594D1248168570095143E /* Child Coordinator */,
 			);
-			path = Coordinator;
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		E1E594C7248158040095143E /* Protocols */ = {
@@ -444,6 +456,33 @@
 				E1FF4AE62485B74800FF2FD2 /* UICollectionViewCell+Helpers.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E1FF4AF62486FBC700FF2FD2 /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF4AF72486FC7F00FF2FD2 /* Design */,
+			);
+			path = Miscellaneous;
+			sourceTree = "<group>";
+		};
+		E1FF4AF72486FC7F00FF2FD2 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF4AF82486FC8B00FF2FD2 /* UIColor.swift */,
+				E1FF4B0324870B2200FF2FD2 /* Typography.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		E1FF4AFA2486FDD600FF2FD2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF4AFB2487003300FF2FD2 /* Lato-Bold.ttf */,
+				E1FF4AFC2487003300FF2FD2 /* Lato-Light.ttf */,
+				E1FF4AFD2487003300FF2FD2 /* Lato-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -555,12 +594,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1FF4AFE2487003300FF2FD2 /* Lato-Bold.ttf in Resources */,
 				E1E594A8248051AB0095143E /* NowPlaying.storyboard in Resources */,
 				E1E59421247F022B0095143E /* LaunchScreen.storyboard in Resources */,
 				E1E5941E247F022B0095143E /* Assets.xcassets in Resources */,
+				E1FF4B002487003300FF2FD2 /* Lato-Regular.ttf in Resources */,
 				E1E5949B24804E740095143E /* Root.storyboard in Resources */,
 				E1E594AF2480536F0095143E /* Movies.storyboard in Resources */,
 				E1FF4ADE2485AE1F00FF2FD2 /* NowPlayingCollectionViewCell.xib in Resources */,
+				E1FF4AFF2487003300FF2FD2 /* Lato-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,6 +731,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E594D52481694A0095143E /* MoviesCoordinator.swift in Sources */,
+				E1FF4AF92486FC8B00FF2FD2 /* UIColor.swift in Sources */,
 				E1FF4AE02485B03700FF2FD2 /* ReusableView.swift in Sources */,
 				E1FF4AC824856E9800FF2FD2 /* APIClient.swift in Sources */,
 				E1E594C32481572F0095143E /* Coordinator.swift in Sources */,
@@ -705,6 +748,7 @@
 				E1FF4AC5248565F700FF2FD2 /* Movies.swift in Sources */,
 				E1FF4AF32486A21500FF2FD2 /* NowPlayingPresentable.swift in Sources */,
 				E1E594C9248158420095143E /* Storyboardable.swift in Sources */,
+				E1FF4B0424870B2200FF2FD2 /* Typography.swift in Sources */,
 				E1E5949D24804E980095143E /* RootViewController.swift in Sources */,
 				E1FF4ACB2485906700FF2FD2 /* NowPlayingViewModel.swift in Sources */,
 				E1FF4ADD2485AE1F00FF2FD2 /* NowPlayingCollectionViewCell.swift in Sources */,
