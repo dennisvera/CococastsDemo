@@ -35,11 +35,13 @@
 		E1FF4AE52485B1BB00FF2FD2 /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AE42485B1BB00FF2FD2 /* UICollectionView+Helpers.swift */; };
 		E1FF4AE72485B74800FF2FD2 /* UICollectionViewCell+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AE62485B74800FF2FD2 /* UICollectionViewCell+Helpers.swift */; };
 		E1FF4AF32486A21500FF2FD2 /* NowPlayingPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AF22486A21500FF2FD2 /* NowPlayingPresentable.swift */; };
-		E1FF4AF92486FC8B00FF2FD2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AF82486FC8B00FF2FD2 /* UIColor.swift */; };
+		E1FF4AF92486FC8B00FF2FD2 /* UIColor+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AF82486FC8B00FF2FD2 /* UIColor+Design.swift */; };
 		E1FF4AFE2487003300FF2FD2 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1FF4AFB2487003300FF2FD2 /* Lato-Bold.ttf */; };
 		E1FF4AFF2487003300FF2FD2 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1FF4AFC2487003300FF2FD2 /* Lato-Light.ttf */; };
 		E1FF4B002487003300FF2FD2 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1FF4AFD2487003300FF2FD2 /* Lato-Regular.ttf */; };
 		E1FF4B0424870B2200FF2FD2 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B0324870B2200FF2FD2 /* Typography.swift */; };
+		E1FF4B15248801CA00FF2FD2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B14248801CA00FF2FD2 /* APIError.swift */; };
+		E1FF4B192488026100FF2FD2 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B182488026100FF2FD2 /* APIEndpoint.swift */; };
 		E42EB19DE3F3F5273E1871E1 /* Pods_CococastsDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160DF9412F2125CE94457FAC /* Pods_CococastsDemoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,11 +103,13 @@
 		E1FF4AE42485B1BB00FF2FD2 /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
 		E1FF4AE62485B74800FF2FD2 /* UICollectionViewCell+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Helpers.swift"; sourceTree = "<group>"; };
 		E1FF4AF22486A21500FF2FD2 /* NowPlayingPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingPresentable.swift; sourceTree = "<group>"; };
-		E1FF4AF82486FC8B00FF2FD2 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		E1FF4AF82486FC8B00FF2FD2 /* UIColor+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Design.swift"; sourceTree = "<group>"; };
 		E1FF4AFB2487003300FF2FD2 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		E1FF4AFC2487003300FF2FD2 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		E1FF4AFD2487003300FF2FD2 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		E1FF4B0324870B2200FF2FD2 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		E1FF4B14248801CA00FF2FD2 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		E1FF4B182488026100FF2FD2 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		FDAED6A49B28F19CA973BBA8 /* Pods-CococastsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CococastsDemo.debug.xcconfig"; path = "Target Support Files/Pods-CococastsDemo/Pods-CococastsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -427,7 +431,7 @@
 		E1FF4AC624856DBD00FF2FD2 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				E1FF4AC724856E9800FF2FD2 /* APIClient.swift */,
+				E1FF4B122488018D00FF2FD2 /* API Client */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -469,7 +473,7 @@
 		E1FF4AF72486FC7F00FF2FD2 /* Design */ = {
 			isa = PBXGroup;
 			children = (
-				E1FF4AF82486FC8B00FF2FD2 /* UIColor.swift */,
+				E1FF4AF82486FC8B00FF2FD2 /* UIColor+Design.swift */,
 				E1FF4B0324870B2200FF2FD2 /* Typography.swift */,
 			);
 			path = Design;
@@ -483,6 +487,32 @@
 				E1FF4AFD2487003300FF2FD2 /* Lato-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E1FF4B122488018D00FF2FD2 /* API Client */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF4B13248801B100FF2FD2 /* Types */,
+				E1FF4B1A2488030200FF2FD2 /* Clients */,
+			);
+			path = "API Client";
+			sourceTree = "<group>";
+		};
+		E1FF4B13248801B100FF2FD2 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF4B14248801CA00FF2FD2 /* APIError.swift */,
+				E1FF4B182488026100FF2FD2 /* APIEndpoint.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		E1FF4B1A2488030200FF2FD2 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF4AC724856E9800FF2FD2 /* APIClient.swift */,
+			);
+			path = Clients;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -731,16 +761,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E594D52481694A0095143E /* MoviesCoordinator.swift in Sources */,
-				E1FF4AF92486FC8B00FF2FD2 /* UIColor.swift in Sources */,
+				E1FF4AF92486FC8B00FF2FD2 /* UIColor+Design.swift in Sources */,
 				E1FF4AE02485B03700FF2FD2 /* ReusableView.swift in Sources */,
 				E1FF4AC824856E9800FF2FD2 /* APIClient.swift in Sources */,
 				E1E594C32481572F0095143E /* Coordinator.swift in Sources */,
 				E1E59415247F022A0095143E /* AppDelegate.swift in Sources */,
 				E1E594CD24815C5F0095143E /* AppCoordinator.swift in Sources */,
+				E1FF4B192488026100FF2FD2 /* APIEndpoint.swift in Sources */,
 				E1E594BA2480A6CE0095143E /* Logger.swift in Sources */,
 				E1E594AD248053630095143E /* MoviesViewController.swift in Sources */,
 				E1E594BE2480AB1A0095143E /* LogFormatter.swift in Sources */,
 				E1FF4AE72485B74800FF2FD2 /* UICollectionViewCell+Helpers.swift in Sources */,
+				E1FF4B15248801CA00FF2FD2 /* APIError.swift in Sources */,
 				E1E59417247F022A0095143E /* SceneDelegate.swift in Sources */,
 				E1E594D3248168710095143E /* NowPlayingCoordinator.swift in Sources */,
 				E1E594A6248050E00095143E /* NowPlayingViewController.swift in Sources */,
