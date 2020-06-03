@@ -14,7 +14,7 @@
 
 import Foundation
 
-final class MockClient: APIProtocol {
+final class MockClient: APIClient {
     
     // MARK: - API Client
 

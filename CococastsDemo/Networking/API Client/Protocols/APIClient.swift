@@ -1,5 +1,5 @@
 //
-//  APIProtocol.swift
+//  APIClient.swift
 //  CococastsDemo
 //
 //  Created by Dennis Vera on 6/3/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal protocol APIProtocol: AnyObject {
+internal protocol APIClient: AnyObject {
   
   func fetchMovies(_ completion: @escaping (Result<MovieResponse, APIError>) -> Void)
 }

@@ -9,7 +9,7 @@
 import Foundation
 import CocoaLumberjack
 
-final class FlickNiteAPIClient: APIProtocol {
+final class FlickNiteAPIClient: APIClient {
   
   // MARK: - Initializer
   
