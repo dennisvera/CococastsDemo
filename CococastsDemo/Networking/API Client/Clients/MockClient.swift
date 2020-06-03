@@ -15,33 +15,33 @@
 import Foundation
 
 final class MockClient: APIClient {
-    
-    // MARK: - API Client
-
-    func fetchMovies(_ completion: @escaping (Result<MovieResponse, APIError>) -> Void) {
-        // Find Mock Response
-        guard let url = Bundle.main.url(forResource: "NowPlayingMovies", withExtension: "json") else {
-            fatalError("Unable to Find Mock Response")
-        }
-        
-        // Load Mock Response
-        guard let data = try? Data(contentsOf: url) else {
-            fatalError("Unable to Load Mock Response")
-        }
-        
-        // Initialize JSON Decoder
-        let decoder = JSONDecoder()
-
-        // Configure JSON Decoder
-        decoder.dateDecodingStrategy = .iso8601
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-
-        // Decode JSON Response
-        guard let episodes = try? decoder.decode(MovieResponse.self, from: data) else {
-            fatalError("Unable to Decode Mock Response")
-        }
-
-        // Invoke Handler
-        completion(.success(episodes))
+  
+  // MARK: - API Client
+  
+  func fetchMovies(_ completion: @escaping (Result<MovieResponse, APIError>) -> Void) {
+    // Find Mock Response
+    guard let url = Bundle.main.url(forResource: "NowPlayingMovies", withExtension: "json") else {
+      fatalError("Unable to Find Mock Response")
     }
+    
+    // Load Mock Response
+    guard let data = try? Data(contentsOf: url) else {
+      fatalError("Unable to Load Mock Response")
+    }
+    
+    // Initialize JSON Decoder
+    let decoder = JSONDecoder()
+    
+    // Configure JSON Decoder
+    decoder.dateDecodingStrategy = .iso8601
+    decoder.keyDecodingStrategy = .convertFromSnakeCase
+    
+    // Decode JSON Response
+    guard let episodes = try? decoder.decode(MovieResponse.self, from: data) else {
+      fatalError("Unable to Decode Mock Response")
+    }
+    
+    // Invoke Handler
+    completion(.success(episodes))
+  }
 }

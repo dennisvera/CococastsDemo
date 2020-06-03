@@ -518,8 +518,8 @@
 		E1FF4B1A2488030200FF2FD2 /* Clients */ = {
 			isa = PBXGroup;
 			children = (
-				E1FF4AC724856E9800FF2FD2 /* FlickNiteAPIClient.swift */,
 				E1FF4B2824882D4100FF2FD2 /* MockClient.swift */,
+				E1FF4AC724856E9800FF2FD2 /* FlickNiteAPIClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
