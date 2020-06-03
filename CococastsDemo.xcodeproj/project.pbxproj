@@ -27,7 +27,7 @@
 		E1E594D3248168710095143E /* NowPlayingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594D2248168710095143E /* NowPlayingCoordinator.swift */; };
 		E1E594D52481694A0095143E /* MoviesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594D42481694A0095143E /* MoviesCoordinator.swift */; };
 		E1FF4AC5248565F700FF2FD2 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AC4248565F700FF2FD2 /* Movies.swift */; };
-		E1FF4AC824856E9800FF2FD2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AC724856E9800FF2FD2 /* APIClient.swift */; };
+		E1FF4AC824856E9800FF2FD2 /* FlickNiteAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AC724856E9800FF2FD2 /* FlickNiteAPIClient.swift */; };
 		E1FF4ACB2485906700FF2FD2 /* NowPlayingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4ACA2485906700FF2FD2 /* NowPlayingViewModel.swift */; };
 		E1FF4ADD2485AE1F00FF2FD2 /* NowPlayingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4ADB2485AE1F00FF2FD2 /* NowPlayingCollectionViewCell.swift */; };
 		E1FF4ADE2485AE1F00FF2FD2 /* NowPlayingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1FF4ADC2485AE1F00FF2FD2 /* NowPlayingCollectionViewCell.xib */; };
@@ -42,6 +42,9 @@
 		E1FF4B0424870B2200FF2FD2 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B0324870B2200FF2FD2 /* Typography.swift */; };
 		E1FF4B15248801CA00FF2FD2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B14248801CA00FF2FD2 /* APIError.swift */; };
 		E1FF4B192488026100FF2FD2 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B182488026100FF2FD2 /* APIEndpoint.swift */; };
+		E1FF4B2624882B8400FF2FD2 /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B2524882B8400FF2FD2 /* APIProtocol.swift */; };
+		E1FF4B2924882D4100FF2FD2 /* MockClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B2824882D4100FF2FD2 /* MockClient.swift */; };
+		E1FF4B2C24882DF900FF2FD2 /* NowPlayingMovies.json in Resources */ = {isa = PBXBuildFile; fileRef = E1FF4B2B24882DF900FF2FD2 /* NowPlayingMovies.json */; };
 		E42EB19DE3F3F5273E1871E1 /* Pods_CococastsDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160DF9412F2125CE94457FAC /* Pods_CococastsDemoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,7 +98,7 @@
 		E1E594D2248168710095143E /* NowPlayingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCoordinator.swift; sourceTree = "<group>"; };
 		E1E594D42481694A0095143E /* MoviesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCoordinator.swift; sourceTree = "<group>"; };
 		E1FF4AC4248565F700FF2FD2 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
-		E1FF4AC724856E9800FF2FD2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		E1FF4AC724856E9800FF2FD2 /* FlickNiteAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickNiteAPIClient.swift; sourceTree = "<group>"; };
 		E1FF4ACA2485906700FF2FD2 /* NowPlayingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewModel.swift; sourceTree = "<group>"; };
 		E1FF4ADB2485AE1F00FF2FD2 /* NowPlayingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewCell.swift; sourceTree = "<group>"; };
 		E1FF4ADC2485AE1F00FF2FD2 /* NowPlayingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NowPlayingCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -110,6 +113,9 @@
 		E1FF4B0324870B2200FF2FD2 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		E1FF4B14248801CA00FF2FD2 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		E1FF4B182488026100FF2FD2 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		E1FF4B2524882B8400FF2FD2 /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
+		E1FF4B2824882D4100FF2FD2 /* MockClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockClient.swift; sourceTree = "<group>"; };
+		E1FF4B2B24882DF900FF2FD2 /* NowPlayingMovies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NowPlayingMovies.json; sourceTree = "<group>"; };
 		FDAED6A49B28F19CA973BBA8 /* Pods-CococastsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CococastsDemo.debug.xcconfig"; path = "Target Support Files/Pods-CococastsDemo/Pods-CococastsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -261,6 +267,7 @@
 			children = (
 				E1E5948F24800C490095143E /* Assets */,
 				E1FF4AFA2486FDD600FF2FD2 /* Fonts */,
+				E1FF4B2A24882DBB00FF2FD2 /* Mock API */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -494,6 +501,7 @@
 			children = (
 				E1FF4B13248801B100FF2FD2 /* Types */,
 				E1FF4B1A2488030200FF2FD2 /* Clients */,
+				E1FF4B2724882BE700FF2FD2 /* Protocols */,
 			);
 			path = "API Client";
 			sourceTree = "<group>";
@@ -510,9 +518,26 @@
 		E1FF4B1A2488030200FF2FD2 /* Clients */ = {
 			isa = PBXGroup;
 			children = (
-				E1FF4AC724856E9800FF2FD2 /* APIClient.swift */,
+				E1FF4AC724856E9800FF2FD2 /* FlickNiteAPIClient.swift */,
+				E1FF4B2824882D4100FF2FD2 /* MockClient.swift */,
 			);
 			path = Clients;
+			sourceTree = "<group>";
+		};
+		E1FF4B2724882BE700FF2FD2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF4B2524882B8400FF2FD2 /* APIProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E1FF4B2A24882DBB00FF2FD2 /* Mock API */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF4B2B24882DF900FF2FD2 /* NowPlayingMovies.json */,
+			);
+			path = "Mock API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -624,6 +649,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1FF4B2C24882DF900FF2FD2 /* NowPlayingMovies.json in Resources */,
 				E1FF4AFE2487003300FF2FD2 /* Lato-Bold.ttf in Resources */,
 				E1E594A8248051AB0095143E /* NowPlaying.storyboard in Resources */,
 				E1E59421247F022B0095143E /* LaunchScreen.storyboard in Resources */,
@@ -763,7 +789,7 @@
 				E1E594D52481694A0095143E /* MoviesCoordinator.swift in Sources */,
 				E1FF4AF92486FC8B00FF2FD2 /* UIColor+Design.swift in Sources */,
 				E1FF4AE02485B03700FF2FD2 /* ReusableView.swift in Sources */,
-				E1FF4AC824856E9800FF2FD2 /* APIClient.swift in Sources */,
+				E1FF4AC824856E9800FF2FD2 /* FlickNiteAPIClient.swift in Sources */,
 				E1E594C32481572F0095143E /* Coordinator.swift in Sources */,
 				E1E59415247F022A0095143E /* AppDelegate.swift in Sources */,
 				E1E594CD24815C5F0095143E /* AppCoordinator.swift in Sources */,
@@ -773,8 +799,10 @@
 				E1E594BE2480AB1A0095143E /* LogFormatter.swift in Sources */,
 				E1FF4AE72485B74800FF2FD2 /* UICollectionViewCell+Helpers.swift in Sources */,
 				E1FF4B15248801CA00FF2FD2 /* APIError.swift in Sources */,
+				E1FF4B2624882B8400FF2FD2 /* APIProtocol.swift in Sources */,
 				E1E59417247F022A0095143E /* SceneDelegate.swift in Sources */,
 				E1E594D3248168710095143E /* NowPlayingCoordinator.swift in Sources */,
+				E1FF4B2924882D4100FF2FD2 /* MockClient.swift in Sources */,
 				E1E594A6248050E00095143E /* NowPlayingViewController.swift in Sources */,
 				E1FF4AE52485B1BB00FF2FD2 /* UICollectionView+Helpers.swift in Sources */,
 				E1FF4AC5248565F700FF2FD2 /* Movies.swift in Sources */,

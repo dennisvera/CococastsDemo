@@ -18,7 +18,7 @@ class NowPlayingCoordinator: Coordinator {
   
   private lazy var nowPlayingViewController: NowPlayingViewController = {
      // Initialize API Client
-    let apiClient = APIClient()
+    let apiClient = FlickNiteAPIClient()
     
     // Initialize Now Playing View Model
     let viewModel = NowPlayingViewModel(apiClient: apiClient)
