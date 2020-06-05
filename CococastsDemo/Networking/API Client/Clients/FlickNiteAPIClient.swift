@@ -13,7 +13,7 @@ final class FlickNiteAPIClient: APIClient {
   
   // MARK: - Initializer
   
-  init() { }
+  init() {}
   
   // MARK: - Public API
   
@@ -32,12 +32,14 @@ final class FlickNiteAPIClient: APIClient {
           // Decode JSON Response
           let movies = try decoder.decode(MovieResponse.self, from: data)
           
+          // Invoke Handler
           completion(.success(movies))
-          
         } catch {
+          // Invoke Handler
           completion(.failure(.invalidResponse))
         }
       } else {
+        // Invoke Handler
         completion(.failure(.requestFailed))
         
         if let error = error {
