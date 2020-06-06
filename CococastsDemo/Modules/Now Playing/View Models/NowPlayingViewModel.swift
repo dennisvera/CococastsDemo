@@ -41,7 +41,7 @@ final class NowPlayingViewModel {
   
   private func fetchMovies() {
     // Fetch Movies
-    apiClient.fetchMovies { [weak self] result in
+    apiClient.fetchMovies(page: 1) { [weak self] result in
       switch result {
       case .success(let movies):
         print(movies.results.count)
