@@ -96,13 +96,16 @@ final class NowPlayingViewModel {
     return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
   }
   
-  private func movies(at index: Int) -> Movie {
+  // MARK: - Public API
+  
+  func movies(at index: Int) -> Movie {
     return movies[index]
   }
   
-  // MARK: - Public API
+  // BUG: - the presentable func crashes the app when called on the cell for row at.
+  // This started happening after the prefetching implementation.
   
-  func presentable(for index: Int) -> NowPlayingPresentable {
-    return movies(at: index)
-  }
+  //  func presentable(for index: Int) -> NowPlayingPresentable {
+  //    return movies(at: index)
+  //  }
 }

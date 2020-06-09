@@ -48,7 +48,7 @@ class NowPlayingViewController: UIViewController, Storyboardable {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-        
+          
     setupViewModel()
   }
   
@@ -77,8 +77,10 @@ extension NowPlayingViewController: UICollectionViewDataSource {
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    // BUG: - the presentable func crashes the app when called on the cell for row at.
+    // This started happening after the prefetching implementation.
     // Fetch Presentable
-    guard let presentable = viewModel?.presentable(for: indexPath.item) else { fatalError("No Movies Available.") }
+    //    guard let presentable = viewModel?.presentable(for: indexPath.item) else { fatalError("No Movies Available.") }
     
     // Dequeue Movie Collection View Cell
     let cell: NowPlayingCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
@@ -87,8 +89,9 @@ extension NowPlayingViewController: UICollectionViewDataSource {
       cell.configure(with: .none)
     } else {
       // Configure Cell
-      cell.configure(with: presentable)
+      cell.configure(with: viewModel?.movies(at: indexPath.item))
     }
+    
     return cell
   }
 }
@@ -122,7 +125,7 @@ extension NowPlayingViewController: NowPlayingViewModelDelegate {
   }
   
   func onFetchFailed(with reason: String) {
-    print("FAILED")
+    // TO DO: Implement Alert Toast
   }
 }
 
