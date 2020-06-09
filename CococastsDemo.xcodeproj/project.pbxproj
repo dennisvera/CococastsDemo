@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D8EF0D235136A5B9C73C4E2 /* Pods_CococastsDemo_CococastsDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D7B425C90E4A966F98CD5 /* Pods_CococastsDemo_CococastsDemoUITests.framework */; };
 		9CC1DF8CDDB42FD9FE976963 /* Pods_CococastsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05EE05BBD483626FE066A4F /* Pods_CococastsDemo.framework */; };
+		E147F51224901A610034DC77 /* APIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147F51124901A610034DC77 /* APIComponents.swift */; };
 		E1E59415247F022A0095143E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59414247F022A0095143E /* AppDelegate.swift */; };
 		E1E59417247F022A0095143E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59416247F022A0095143E /* SceneDelegate.swift */; };
 		E1E5941E247F022B0095143E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E5941D247F022B0095143E /* Assets.xcassets */; };
@@ -74,6 +75,7 @@
 		AE92322144B18D91E1E0D629 /* Pods-CococastsDemo-CococastsDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CococastsDemo-CococastsDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-CococastsDemo-CococastsDemoUITests/Pods-CococastsDemo-CococastsDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DDDC51CF68574C3A6D6E440F /* Pods-CococastsDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CococastsDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-CococastsDemoTests/Pods-CococastsDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E05EE05BBD483626FE066A4F /* Pods_CococastsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CococastsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E147F51124901A610034DC77 /* APIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIComponents.swift; sourceTree = "<group>"; };
 		E1E59411247F022A0095143E /* CococastsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CococastsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E59414247F022A0095143E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1E59416247F022A0095143E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -511,6 +513,7 @@
 			children = (
 				E1FF4B14248801CA00FF2FD2 /* APIError.swift */,
 				E1FF4B182488026100FF2FD2 /* APIEndpoint.swift */,
+				E147F51124901A610034DC77 /* APIComponents.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -794,6 +797,7 @@
 				E1E59415247F022A0095143E /* AppDelegate.swift in Sources */,
 				E1E594CD24815C5F0095143E /* AppCoordinator.swift in Sources */,
 				E1FF4B192488026100FF2FD2 /* APIEndpoint.swift in Sources */,
+				E147F51224901A610034DC77 /* APIComponents.swift in Sources */,
 				E1E594BA2480A6CE0095143E /* Logger.swift in Sources */,
 				E1E594AD248053630095143E /* MoviesViewController.swift in Sources */,
 				E1E594BE2480AB1A0095143E /* LogFormatter.swift in Sources */,
