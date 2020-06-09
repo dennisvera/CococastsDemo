@@ -18,15 +18,21 @@ final class NowPlayingViewModel {
   
   // MARK: - Properties
   
-  private let apiClient: FlickNiteAPIClient
-  
   var delegate: NowPlayingViewModelDelegate?
+  
+  private let apiClient: FlickNiteAPIClient
   
   private var currentPage = 1
   private var total = 0
   private var isFetchInProgress = false
-  private var movies: [Movie] = []
   
+  private var movies: [Movie] = [] {
+    didSet {
+      DispatchQueue.main.async {
+        self.moviesDidChange?()
+      }
+    }
+  }
   // MARK: - Public API
   
   var moviesDidChange: (() -> Void)?
