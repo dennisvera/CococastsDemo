@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class NowPlayingViewController: UIViewController, Storyboardable {
   
@@ -93,6 +94,11 @@ extension NowPlayingViewController: UICollectionViewDataSource {
     }
     
     return cell
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    // Notify View Model
+    viewModel?.selectMovie(at: indexPath.item)
   }
 }
 

@@ -46,7 +46,7 @@
             </view>
             <size key="customSize" width="393" height="661"/>
             <connections>
-                <outlet property="imageView" destination="mZD-DZ-7x8" id="h8y-dh-NNl"/>
+                <outlet property="moviePosterImageView" destination="mZD-DZ-7x8" id="h8y-dh-NNl"/>
                 <outlet property="titleLabel" destination="xTa-2L-htb" id="fvN-Yk-kEv"/>
             </connections>
             <point key="canvasLocation" x="39.130434782608695" y="176.11607142857142"/>

@@ -7,14 +7,13 @@
 //
 
 import UIKit
-import SDWebImage
 
 class NowPlayingCollectionViewCell: UICollectionViewCell {
   
   // MARK: - Outlets
   
-  @IBOutlet private var imageView: UIImageView!
   @IBOutlet private var titleLabel: UILabel!
+  @IBOutlet private var moviePosterImageView: UIImageView!
   
   // MARK: - Overrides
   
@@ -25,9 +24,12 @@ class NowPlayingCollectionViewCell: UICollectionViewCell {
   // MARK: - Public API
   
   func configure(with presentable: NowPlayingPresentable?) {
+    // Configure Title Label
+    titleLabel.attributedText = presentable?.title.toTtitle(color: UIColor.FlickNite.red)
+    
+    // Configure Image View
     let imageBaseUrl = "https://image.tmdb.org/t/p/w200/"
     guard let posterPath = presentable?.posterPath else { return }
-    imageView.sd_setImage(with: URL(string: imageBaseUrl + posterPath))
-    titleLabel.attributedText = presentable?.title.toTtitle(color: UIColor.FlickNite.red)
+    moviePosterImageView.sd_setImage(with: URL(string: imageBaseUrl + posterPath))
   }
 }

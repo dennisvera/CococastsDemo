@@ -12,22 +12,70 @@ class NowPlayingCoordinator: Coordinator {
   
   // MARK: - Properties
   
+  private let navigationController = UINavigationController()
+  
+  // MARK: - Public API
+  
   var rootViewController: UIViewController {
-    return nowPlayingViewController
+    return navigationController
   }
   
-  private lazy var nowPlayingViewController: NowPlayingViewController = {
+  // MARK: - Overrides
+  
+  override func start() {
+    // Set Navigation Controller Delegate
+    navigationController.delegate = self
+    
+    // Show Photos
+    showMovies()
+  }
+  
+  // MARK: -
+  
+  override func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+    childCoordinators.forEach { (childCoordinator) in
+      childCoordinator.navigationController(navigationController, willShow: viewController, animated: animated)
+    }
+  }
+  
+  override func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+    childCoordinators.forEach { (childCoordinator) in
+      childCoordinator.navigationController(navigationController, didShow: viewController, animated: animated)
+    }
+  }
+  
+  // MARK: - Helper Methods
+  
+  private func showMovies() {
     // Initialize API Client
     let apiClient = FlickNiteAPIClient()
-    
+
     // Initialize Now Playing View Model
     let viewModel = NowPlayingViewModel(apiClient: apiClient)
-    
+
     // Initialize Now Playing View Controller
     let nowPlayingViewController = NowPlayingViewController.instantiate()
     // Configure Now Playing View Controller
     nowPlayingViewController.viewModel = viewModel
     
-    return nowPlayingViewController
-  }()
+    // Install Handlers
+    viewModel.didSelectMovie = { [weak self] movie in
+      guard let strongSelf = self else { return }
+      strongSelf.showMovie(movie)
+    }
+    
+    // Push Photos View Controller Onto Navigation Stack
+    navigationController.pushViewController(nowPlayingViewController, animated: true)
+  }
+    
+  private func showMovie(_ movie: Movie) {
+    // Initialize Movie Detail View Controller
+    let movieViewController = MovieDetailCollectionViewController()
+    
+    // Configure Movie Detail View Controller
+    movieViewController.movie = movie
+    
+    // Push Movie Detail View Controller Onto Navigation Stack
+    navigationController.pushViewController(movieViewController, animated: true)
+  }
 }
