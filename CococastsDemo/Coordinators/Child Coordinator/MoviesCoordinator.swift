@@ -1,5 +1,5 @@
 //
-//  NowPlayingCoordinator.swift
+//  MoviesCoordinator.swift
 //  CococastsDemo
 //
 //  Created by Dennis Vera on 5/29/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NowPlayingCoordinator: Coordinator {
+class MoviesCoordinator: Coordinator {
   
   // MARK: - Properties
   
@@ -32,13 +32,17 @@ class NowPlayingCoordinator: Coordinator {
   
   // MARK: -
   
-  override func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+  override func navigationController(_ navigationController: UINavigationController,
+                                     willShow viewController: UIViewController,
+                                     animated: Bool) {
     childCoordinators.forEach { (childCoordinator) in
       childCoordinator.navigationController(navigationController, willShow: viewController, animated: animated)
     }
   }
   
-  override func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+  override func navigationController(_ navigationController: UINavigationController,
+                                     didShow viewController: UIViewController,
+                                     animated: Bool) {
     childCoordinators.forEach { (childCoordinator) in
       childCoordinator.navigationController(navigationController, didShow: viewController, animated: animated)
     }
@@ -49,14 +53,14 @@ class NowPlayingCoordinator: Coordinator {
   private func showMovies() {
     // Initialize API Client
     let apiClient = FlickNiteAPIClient()
-
+    
     // Initialize Now Playing View Model
-    let viewModel = NowPlayingViewModel(apiClient: apiClient)
-
+    let viewModel = MoviesViewModel(apiClient: apiClient)
+    
     // Initialize Now Playing View Controller
-    let nowPlayingViewController = NowPlayingViewController.instantiate()
+    let moviesViewController = MoviesViewController.instantiate()
     // Configure Now Playing View Controller
-    nowPlayingViewController.viewModel = viewModel
+    moviesViewController.viewModel = viewModel
     
     // Install Handlers
     viewModel.didSelectMovie = { [weak self] movie in
@@ -65,9 +69,9 @@ class NowPlayingCoordinator: Coordinator {
     }
     
     // Push Photos View Controller Onto Navigation Stack
-    navigationController.pushViewController(nowPlayingViewController, animated: true)
+    navigationController.pushViewController(moviesViewController, animated: true)
   }
-    
+  
   private func showMovie(_ movie: Movie) {
     // Initialize Movie Detail View Controller
     let movieViewController = MovieDetailCollectionViewController()

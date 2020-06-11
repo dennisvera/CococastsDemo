@@ -1,5 +1,5 @@
 //
-//  NowPlayingCollectionViewCell.swift
+//  MoviesCollectionViewCell.swift
 //  CococastsDemo
 //
 //  Created by Dennis Vera on 6/1/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NowPlayingCollectionViewCell: UICollectionViewCell {
+class MoviesCollectionViewCell: UICollectionViewCell {
   
   // MARK: - Outlets
   
@@ -23,7 +23,7 @@ class NowPlayingCollectionViewCell: UICollectionViewCell {
   
   // MARK: - Public API
   
-  func configure(with presentable: NowPlayingPresentable?) {
+  func configure(with presentable: MoviePresentable?) {
     // Configure Title Label
     titleLabel.attributedText = presentable?.title.toTtitle(color: UIColor.FlickNite.red)
     

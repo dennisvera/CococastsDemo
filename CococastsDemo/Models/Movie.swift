@@ -1,5 +1,5 @@
 //
-//  Movies.swift
+//  Movie.swift
 //  CococastsDemo
 //
 //  Created by Dennis Vera on 6/1/20.

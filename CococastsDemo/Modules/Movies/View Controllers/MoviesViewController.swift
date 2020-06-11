@@ -1,5 +1,5 @@
 //
-//  NowPlayingViewController.swift
+//  MoviesViewController.swift
 //  CococastsDemo
 //
 //  Created by Dennis Vera on 5/28/20.
@@ -9,12 +9,12 @@
 import UIKit
 import SDWebImage
 
-class NowPlayingViewController: UIViewController, Storyboardable {
+class MoviesViewController: UIViewController, Storyboardable {
   
   // MARK: - Storyboardable
   
   static var storyboardName: String {
-    return "NowPlaying"
+    return "Movies"
   }
   
   @IBOutlet var collectionView: UICollectionView! {
@@ -27,14 +27,14 @@ class NowPlayingViewController: UIViewController, Storyboardable {
       collectionView.collectionViewLayout = UICollectionViewFlowLayout()
       
       // Register Movie Collection View Cell
-      let xib = UINib(nibName: NowPlayingCollectionViewCell.nibName, bundle: .main)
-      collectionView.register(xib, forCellWithReuseIdentifier: NowPlayingCollectionViewCell.reuseIdentifier)
+      let xib = UINib(nibName: MoviesCollectionViewCell.nibName, bundle: .main)
+      collectionView.register(xib, forCellWithReuseIdentifier: MoviesCollectionViewCell.reuseIdentifier)
     }
   }
   
   // MARK: - Properties
   
-  var viewModel: NowPlayingViewModel?
+  var viewModel: MoviesViewModel?
   
   // MARK: - Initialization
   
@@ -67,7 +67,7 @@ class NowPlayingViewController: UIViewController, Storyboardable {
   }
 }
 
-extension NowPlayingViewController: UICollectionViewDataSource {
+extension MoviesViewController: UICollectionViewDataSource {
   
   func numberOfSections(in collectionView: UICollectionView) -> Int {
     return 1
@@ -84,7 +84,7 @@ extension NowPlayingViewController: UICollectionViewDataSource {
     //    guard let presentable = viewModel?.presentable(for: indexPath.item) else { fatalError("No Movies Available.") }
     
     // Dequeue Movie Collection View Cell
-    let cell: NowPlayingCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+    let cell: MoviesCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
     
     if isLoadingCell(for: indexPath) {
       cell.configure(with: .none)
@@ -102,7 +102,7 @@ extension NowPlayingViewController: UICollectionViewDataSource {
   }
 }
 
-extension NowPlayingViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
   
   func collectionView(_ collectionView: UICollectionView,
                       layout collectionViewLayout: UICollectionViewLayout,
@@ -118,7 +118,7 @@ extension NowPlayingViewController: UICollectionViewDelegate, UICollectionViewDe
   }
 }
 
-extension NowPlayingViewController: NowPlayingViewModelDelegate {
+extension MoviesViewController: MoviesViewModelDelegate {
   
   func onFetchCompleted(with newIndexPathsToReload: [IndexPath]?) {
     guard let newIndexPathsToReload = newIndexPathsToReload else {
@@ -135,7 +135,7 @@ extension NowPlayingViewController: NowPlayingViewModelDelegate {
   }
 }
 
-extension NowPlayingViewController: UICollectionViewDataSourcePrefetching {
+extension MoviesViewController: UICollectionViewDataSourcePrefetching {
   
   func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
     if indexPaths.contains(where: isLoadingCell) {
@@ -144,7 +144,7 @@ extension NowPlayingViewController: UICollectionViewDataSourcePrefetching {
   }
 }
 
-private extension NowPlayingViewController {
+private extension MoviesViewController {
   
   func isLoadingCell(for indexPath: IndexPath) -> Bool {
     return indexPath.row >= viewModel?.currentCount ?? 0

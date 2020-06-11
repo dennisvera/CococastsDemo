@@ -1,5 +1,5 @@
 //
-//  NowPlayingPresentable.swift
+//  MoviePresentable.swift
 //  CococastsDemo
 //
 //  Created by Dennis Vera on 6/2/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol NowPlayingPresentable {
+protocol MoviePresentable {
   
   // MARK: - Properties
   
@@ -16,4 +16,4 @@ protocol NowPlayingPresentable {
   var posterPath: String? { get }
 }
 
-extension Movie: NowPlayingPresentable {}
+extension Movie: MoviePresentable {}
