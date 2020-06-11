@@ -44,7 +44,6 @@ final class NowPlayingViewModel {
   }
   
   var moviesDidChange: (() -> Void)?
-  
   var didSelectMovie: ((Movie) -> Void)?
   
   // MARK: - Initialization

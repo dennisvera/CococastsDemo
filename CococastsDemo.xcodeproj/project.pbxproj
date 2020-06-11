@@ -19,15 +19,15 @@
 		E1E5949D24804E980095143E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5949C24804E980095143E /* RootViewController.swift */; };
 		E1E594A6248050E00095143E /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594A5248050E00095143E /* NowPlayingViewController.swift */; };
 		E1E594A8248051AB0095143E /* NowPlaying.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E594A7248051AB0095143E /* NowPlaying.storyboard */; };
-		E1E594AD248053630095143E /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594AC248053630095143E /* MoviesViewController.swift */; };
-		E1E594AF2480536F0095143E /* Movies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E594AE2480536F0095143E /* Movies.storyboard */; };
+		E1E594AD248053630095143E /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594AC248053630095143E /* FavoritesViewController.swift */; };
+		E1E594AF2480536F0095143E /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E594AE2480536F0095143E /* Favorites.storyboard */; };
 		E1E594BA2480A6CE0095143E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594B92480A6CE0095143E /* Logger.swift */; };
 		E1E594BE2480AB1A0095143E /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594BD2480AB1A0095143E /* LogFormatter.swift */; };
 		E1E594C32481572F0095143E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594C22481572F0095143E /* Coordinator.swift */; };
 		E1E594C9248158420095143E /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594C8248158420095143E /* Storyboardable.swift */; };
 		E1E594CD24815C5F0095143E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594CC24815C5F0095143E /* AppCoordinator.swift */; };
 		E1E594D3248168710095143E /* NowPlayingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594D2248168710095143E /* NowPlayingCoordinator.swift */; };
-		E1E594D52481694A0095143E /* MoviesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594D42481694A0095143E /* MoviesCoordinator.swift */; };
+		E1E594D52481694A0095143E /* FavoritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594D42481694A0095143E /* FavoritesCoordinator.swift */; };
 		E1FF4AC5248565F700FF2FD2 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AC4248565F700FF2FD2 /* Movies.swift */; };
 		E1FF4AC824856E9800FF2FD2 /* FlickNiteAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AC724856E9800FF2FD2 /* FlickNiteAPIClient.swift */; };
 		E1FF4ACB2485906700FF2FD2 /* NowPlayingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4ACA2485906700FF2FD2 /* NowPlayingViewModel.swift */; };
@@ -92,15 +92,15 @@
 		E1E5949C24804E980095143E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		E1E594A5248050E00095143E /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 		E1E594A7248051AB0095143E /* NowPlaying.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NowPlaying.storyboard; sourceTree = "<group>"; };
-		E1E594AC248053630095143E /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
-		E1E594AE2480536F0095143E /* Movies.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movies.storyboard; sourceTree = "<group>"; };
+		E1E594AC248053630095143E /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		E1E594AE2480536F0095143E /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		E1E594B92480A6CE0095143E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		E1E594BD2480AB1A0095143E /* LogFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFormatter.swift; sourceTree = "<group>"; };
 		E1E594C22481572F0095143E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		E1E594C8248158420095143E /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		E1E594CC24815C5F0095143E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		E1E594D2248168710095143E /* NowPlayingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCoordinator.swift; sourceTree = "<group>"; };
-		E1E594D42481694A0095143E /* MoviesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCoordinator.swift; sourceTree = "<group>"; };
+		E1E594D42481694A0095143E /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCoordinator.swift; sourceTree = "<group>"; };
 		E1FF4AC4248565F700FF2FD2 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		E1FF4AC724856E9800FF2FD2 /* FlickNiteAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickNiteAPIClient.swift; sourceTree = "<group>"; };
 		E1FF4ACA2485906700FF2FD2 /* NowPlayingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewModel.swift; sourceTree = "<group>"; };
@@ -336,7 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				E1E594A22480508A0095143E /* Now Playing */,
-				E1E594A92480531A0095143E /* Movies */,
+				E1E594A92480531A0095143E /* Favorites */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -369,19 +369,19 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		E1E594A92480531A0095143E /* Movies */ = {
+		E1E594A92480531A0095143E /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
 				E1E594AB2480532C0095143E /* View Controllers */,
 				E1E594AA248053230095143E /* Storyboards */,
 			);
-			path = Movies;
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 		E1E594AA248053230095143E /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				E1E594AE2480536F0095143E /* Movies.storyboard */,
+				E1E594AE2480536F0095143E /* Favorites.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -389,7 +389,7 @@
 		E1E594AB2480532C0095143E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E1E594AC248053630095143E /* MoviesViewController.swift */,
+				E1E594AC248053630095143E /* FavoritesViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -443,7 +443,7 @@
 			isa = PBXGroup;
 			children = (
 				E1E594D2248168710095143E /* NowPlayingCoordinator.swift */,
-				E1E594D42481694A0095143E /* MoviesCoordinator.swift */,
+				E1E594D42481694A0095143E /* FavoritesCoordinator.swift */,
 			);
 			path = "Child Coordinator";
 			sourceTree = "<group>";
@@ -678,7 +678,7 @@
 				E1E5941E247F022B0095143E /* Assets.xcassets in Resources */,
 				E1FF4B002487003300FF2FD2 /* Lato-Regular.ttf in Resources */,
 				E1E5949B24804E740095143E /* Root.storyboard in Resources */,
-				E1E594AF2480536F0095143E /* Movies.storyboard in Resources */,
+				E1E594AF2480536F0095143E /* Favorites.storyboard in Resources */,
 				E1FF4ADE2485AE1F00FF2FD2 /* NowPlayingCollectionViewCell.xib in Resources */,
 				E1FF4AFF2487003300FF2FD2 /* Lato-Light.ttf in Resources */,
 			);
@@ -808,7 +808,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E594D52481694A0095143E /* MoviesCoordinator.swift in Sources */,
+				E1E594D52481694A0095143E /* FavoritesCoordinator.swift in Sources */,
 				E1FF4AF92486FC8B00FF2FD2 /* UIColor+Design.swift in Sources */,
 				E1FF4AE02485B03700FF2FD2 /* ReusableView.swift in Sources */,
 				E1FF4AC824856E9800FF2FD2 /* FlickNiteAPIClient.swift in Sources */,
@@ -818,7 +818,7 @@
 				E1FF4B192488026100FF2FD2 /* APIEndpoint.swift in Sources */,
 				E147F51224901A610034DC77 /* APIComponents.swift in Sources */,
 				E1E594BA2480A6CE0095143E /* Logger.swift in Sources */,
-				E1E594AD248053630095143E /* MoviesViewController.swift in Sources */,
+				E1E594AD248053630095143E /* FavoritesViewController.swift in Sources */,
 				E1E594BE2480AB1A0095143E /* LogFormatter.swift in Sources */,
 				E1FF4AE72485B74800FF2FD2 /* UICollectionViewCell+Helpers.swift in Sources */,
 				E1FF4B15248801CA00FF2FD2 /* APIError.swift in Sources */,

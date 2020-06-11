@@ -24,15 +24,21 @@ class Coordinator: NSObject, UINavigationControllerDelegate {
   
   // MARK: -
   
-  func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {}
-  func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {}
+  func navigationController(_ navigationController: UINavigationController,
+                            willShow viewController: UIViewController,
+                            animated: Bool) {}
+  
+  func navigationController(_ navigationController: UINavigationController,
+                            didShow viewController: UIViewController,
+                            animated: Bool) {}
   
   // MARK: -
   
   func pushCoordinator(_ coordinator: Coordinator) {
     // Install Handler
     coordinator.didFinish = { [weak self] (coordinator) in
-      self?.popCoordinator(coordinator)
+      guard let strongSelf = self else { return }
+      strongSelf.popCoordinator(coordinator)
     }
     
     // Start Coordinator
