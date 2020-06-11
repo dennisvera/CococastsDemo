@@ -10,7 +10,8 @@
 		0D8EF0D235136A5B9C73C4E2 /* Pods_CococastsDemo_CococastsDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D7B425C90E4A966F98CD5 /* Pods_CococastsDemo_CococastsDemoUITests.framework */; };
 		9CC1DF8CDDB42FD9FE976963 /* Pods_CococastsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05EE05BBD483626FE066A4F /* Pods_CococastsDemo.framework */; };
 		E147F51224901A610034DC77 /* APIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147F51124901A610034DC77 /* APIComponents.swift */; };
-		E147F524249148360034DC77 /* MovieDetailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147F523249148360034DC77 /* MovieDetailCollectionViewController.swift */; };
+		E147F524249148360034DC77 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147F523249148360034DC77 /* MovieDetailViewController.swift */; };
+		E147F53124928EB40034DC77 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147F53024928E230034DC77 /* MovieViewModel.swift */; };
 		E1E59415247F022A0095143E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59414247F022A0095143E /* AppDelegate.swift */; };
 		E1E59417247F022A0095143E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59416247F022A0095143E /* SceneDelegate.swift */; };
 		E1E5941E247F022B0095143E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E5941D247F022B0095143E /* Assets.xcassets */; };
@@ -77,7 +78,8 @@
 		DDDC51CF68574C3A6D6E440F /* Pods-CococastsDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CococastsDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-CococastsDemoTests/Pods-CococastsDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E05EE05BBD483626FE066A4F /* Pods_CococastsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CococastsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E147F51124901A610034DC77 /* APIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIComponents.swift; sourceTree = "<group>"; };
-		E147F523249148360034DC77 /* MovieDetailCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailCollectionViewController.swift; sourceTree = "<group>"; };
+		E147F523249148360034DC77 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		E147F53024928E230034DC77 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		E1E59411247F022A0095143E /* CococastsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CococastsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E59414247F022A0095143E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1E59416247F022A0095143E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,17 +179,18 @@
 		E147F521249147EF0034DC77 /* Movie Detail Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E147F522249148130034DC77 /* View Controllers */,
+				E147F523249148360034DC77 /* MovieDetailViewController.swift */,
+				E147F52E24928DE50034DC77 /* View Models */,
 			);
 			path = "Movie Detail Controller";
 			sourceTree = "<group>";
 		};
-		E147F522249148130034DC77 /* View Controllers */ = {
+		E147F52E24928DE50034DC77 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				E147F523249148360034DC77 /* MovieDetailCollectionViewController.swift */,
+				E147F53024928E230034DC77 /* MovieViewModel.swift */,
 			);
-			path = "View Controllers";
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		E1E59408247F02290095143E = {
@@ -344,8 +347,9 @@
 		E1E594A22480508A0095143E /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				E1E594A5248050E00095143E /* MoviesViewController.swift */,
 				E1FF4AC92485904C00FF2FD2 /* View Models */,
-				E1E594A4248050A80095143E /* View Controllers */,
+				E1FF4AD82485ADC300FF2FD2 /* Collection View Cells */,
 				E147F521249147EF0034DC77 /* Movie Detail Controller */,
 				E1E594A32480509A0095143E /* Storyboards */,
 			);
@@ -358,15 +362,6 @@
 				E1E594A7248051AB0095143E /* Movies.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		E1E594A4248050A80095143E /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				E1E594A5248050E00095143E /* MoviesViewController.swift */,
-				E1FF4AD82485ADC300FF2FD2 /* Collection View Cells */,
-			);
-			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		E1E594A92480531A0095143E /* Favorites */ = {
@@ -823,6 +818,7 @@
 				E1FF4AE72485B74800FF2FD2 /* UICollectionViewCell+Helpers.swift in Sources */,
 				E1FF4B15248801CA00FF2FD2 /* APIError.swift in Sources */,
 				E1FF4B2624882B8400FF2FD2 /* APIClient.swift in Sources */,
+				E147F53124928EB40034DC77 /* MovieViewModel.swift in Sources */,
 				E1E59417247F022A0095143E /* SceneDelegate.swift in Sources */,
 				E1E594D3248168710095143E /* MoviesCoordinator.swift in Sources */,
 				E1FF4B2924882D4100FF2FD2 /* MockClient.swift in Sources */,
@@ -830,7 +826,7 @@
 				E1FF4AE52485B1BB00FF2FD2 /* UICollectionView+Helpers.swift in Sources */,
 				E1FF4AC5248565F700FF2FD2 /* Movie.swift in Sources */,
 				E1FF4AF32486A21500FF2FD2 /* MoviePresentable.swift in Sources */,
-				E147F524249148360034DC77 /* MovieDetailCollectionViewController.swift in Sources */,
+				E147F524249148360034DC77 /* MovieDetailViewController.swift in Sources */,
 				E1E594C9248158420095143E /* Storyboardable.swift in Sources */,
 				E1FF4B0424870B2200FF2FD2 /* Typography.swift in Sources */,
 				E1E5949D24804E980095143E /* RootViewController.swift in Sources */,

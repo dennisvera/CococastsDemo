@@ -28,7 +28,7 @@ class MoviesCollectionViewCell: UICollectionViewCell {
     titleLabel.attributedText = presentable?.title.toTtitle(color: UIColor.FlickNite.red)
     
     // Configure Image View
-    let imageBaseUrl = "https://image.tmdb.org/t/p/w200/"
+    let imageBaseUrl = "https://image.tmdb.org/t/p/w500/"
     guard let posterPath = presentable?.posterPath else { return }
     moviePosterImageView.sd_setImage(with: URL(string: imageBaseUrl + posterPath))
   }

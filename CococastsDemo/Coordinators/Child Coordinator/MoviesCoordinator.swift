@@ -73,13 +73,16 @@ class MoviesCoordinator: Coordinator {
   }
   
   private func showMovie(_ movie: Movie) {
+    // Initialize Movie View Model
+    let viewModel = MovieViewModel(movie: movie)
+    
     // Initialize Movie Detail View Controller
-    let movieViewController = MovieDetailCollectionViewController()
+    let movieDetailViewController = MovieDetailViewController.instantiate()
     
     // Configure Movie Detail View Controller
-    movieViewController.movie = movie
+    movieDetailViewController.viewModel = viewModel
     
     // Push Movie Detail View Controller Onto Navigation Stack
-    navigationController.pushViewController(movieViewController, animated: true)
+    navigationController.pushViewController(movieDetailViewController, animated: true)
   }
 }

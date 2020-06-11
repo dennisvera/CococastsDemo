@@ -44,46 +44,39 @@
             </objects>
             <point key="canvasLocation" x="82.608695652173921" y="155.35714285714286"/>
         </scene>
-        <!--Movie Detail Collection View Controller-->
-        <scene sceneID="7dV-Qi-rHp">
+        <!--Movie Detail View Controller-->
+        <scene sceneID="rkz-jg-SPY">
             <objects>
-                <viewController storyboardIdentifier="MovieDetailCollectionViewController" id="aOz-YH-Zny" customClass="MovieDetailCollectionViewController" customModule="CococastsDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PTO-a6-d96">
+                <viewController storyboardIdentifier="MovieDetailViewController" id="frB-m1-9y5" customClass="MovieDetailViewController" customModule="CococastsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hor-aU-vc2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gDf-vI-954">
-                                <rect key="frame" x="0.0" y="44" width="414" height="218"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="218" id="V8Q-n3-szf"/>
-                                </constraints>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="woj-aB-F5L">
+                                <rect key="frame" x="197" y="443" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O32-2L-jww">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYg-Fq-bfI">
-                                <rect key="frame" x="20" y="438" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gDf-vI-954" firstAttribute="leading" secondItem="CKU-ry-sSC" secondAttribute="leading" id="1TQ-8D-wN6"/>
-                            <constraint firstItem="CKU-ry-sSC" firstAttribute="trailing" secondItem="VYg-Fq-bfI" secondAttribute="trailing" constant="20" id="WAg-RX-y3K"/>
-                            <constraint firstItem="VYg-Fq-bfI" firstAttribute="leading" secondItem="CKU-ry-sSC" secondAttribute="leading" constant="20" id="drw-3e-LUO"/>
-                            <constraint firstItem="VYg-Fq-bfI" firstAttribute="top" secondItem="gDf-vI-954" secondAttribute="bottom" constant="176" id="f93-44-A7J"/>
-                            <constraint firstItem="CKU-ry-sSC" firstAttribute="trailing" secondItem="gDf-vI-954" secondAttribute="trailing" id="lPv-Zz-fbK"/>
-                            <constraint firstItem="gDf-vI-954" firstAttribute="top" secondItem="CKU-ry-sSC" secondAttribute="top" id="n2C-A0-Omb"/>
+                            <constraint firstItem="woj-aB-F5L" firstAttribute="centerY" secondItem="QYy-or-gLO" secondAttribute="centerY" id="2hc-8a-Flg"/>
+                            <constraint firstAttribute="top" secondItem="O32-2L-jww" secondAttribute="top" id="856-gM-nFT"/>
+                            <constraint firstItem="woj-aB-F5L" firstAttribute="centerX" secondItem="QYy-or-gLO" secondAttribute="centerX" id="CQp-pm-n5L"/>
+                            <constraint firstItem="O32-2L-jww" firstAttribute="leading" secondItem="QYy-or-gLO" secondAttribute="leading" id="DqB-NE-ryl"/>
+                            <constraint firstItem="O32-2L-jww" firstAttribute="bottom" secondItem="hor-aU-vc2" secondAttribute="bottom" id="bhU-MN-kXG"/>
+                            <constraint firstItem="O32-2L-jww" firstAttribute="trailing" secondItem="QYy-or-gLO" secondAttribute="trailing" id="kQo-FS-28T"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="CKU-ry-sSC"/>
+                        <viewLayoutGuide key="safeArea" id="QYy-or-gLO"/>
                     </view>
                     <connections>
-                        <outlet property="moviePosterImageView" destination="gDf-vI-954" id="t99-19-j3f"/>
-                        <outlet property="titleLabel" destination="VYg-Fq-bfI" id="Zw1-0J-klm"/>
+                        <outlet property="moviePosterImageView" destination="O32-2L-jww" id="aNG-31-faj"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yuS-TF-gba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jh0-MX-Dc5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="834.78260869565224" y="154.6875"/>
+            <point key="canvasLocation" x="773.91304347826087" y="154.6875"/>
         </scene>
     </scenes>
 </document>

@@ -30,7 +30,7 @@ extension Storyboardable where Self: UIViewController {
     // MARK: - Properties
     
     static var storyboardName: String {
-        return "Main"
+        return "Movies"
     }
     
     static var storyboardBundle: Bundle {

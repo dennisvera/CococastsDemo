@@ -42,7 +42,7 @@ class MoviesViewController: UIViewController, Storyboardable {
     super.init(coder: coder)
     
     // Set Title
-    title = "Now Playing"
+    title = "Movies"
   }
   
   // MARK: - View Life Cycle
