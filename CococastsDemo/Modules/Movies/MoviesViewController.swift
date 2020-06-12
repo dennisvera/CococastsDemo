@@ -17,6 +17,8 @@ class MoviesViewController: UIViewController, Storyboardable {
     return "Movies"
   }
   
+  // MARK: - Outlets
+  
   @IBOutlet var collectionView: UICollectionView! {
     didSet {
       // Configure Collection View
@@ -33,6 +35,9 @@ class MoviesViewController: UIViewController, Storyboardable {
   }
   
   // MARK: - Properties
+  
+  private var numberOfItemsInRow = 2
+  private var minimumSpacing: CGFloat = 5
   
   var viewModel: MoviesViewModel?
   
@@ -107,14 +112,27 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDelega
   func collectionView(_ collectionView: UICollectionView,
                       layout collectionViewLayout: UICollectionViewLayout,
                       sizeForItemAt indexPath: IndexPath) -> CGSize {
-    
-    return .init(width: collectionView.bounds.width, height: 340.0)
+    let width = (Int(view.frame.width) - (numberOfItemsInRow - 1) * 5 - 20) / numberOfItemsInRow
+    return CGSize(width: width, height: 280)
   }
   
   func collectionView(_ collectionView: UICollectionView,
                       layout collectionViewLayout: UICollectionViewLayout,
                       minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    return 20.0
+    return minimumSpacing
+  }
+  
+  func collectionView(_ collectionView: UICollectionView,
+                      layout collectionViewLayout: UICollectionViewLayout,
+                      minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    return minimumSpacing
+  }
+  
+  func collectionView(_ collectionView: UICollectionView,
+                      layout collectionViewLayout: UICollectionViewLayout,
+                      insetForSectionAt section: Int) -> UIEdgeInsets {
+    
+    return .init(top: 10, left: 10, bottom: 10, right: 10)
   }
 }
 
