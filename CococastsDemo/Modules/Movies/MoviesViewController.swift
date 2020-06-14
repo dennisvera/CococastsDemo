@@ -26,6 +26,7 @@ class MoviesViewController: UIViewController, Storyboardable {
       collectionView.dataSource = self
       collectionView.prefetchDataSource = self
       collectionView.isPrefetchingEnabled = true
+      collectionView.backgroundColor = UIColor.FlickNite.darkGray
       collectionView.collectionViewLayout = UICollectionViewFlowLayout()
       
       // Register Movie Collection View Cell
@@ -56,6 +57,7 @@ class MoviesViewController: UIViewController, Storyboardable {
     super.viewDidLoad()
           
     setupViewModel()
+    setupTabAndNavigationBar()
   }
   
   // MARK: - Helper Methods
@@ -69,6 +71,14 @@ class MoviesViewController: UIViewController, Storyboardable {
       guard let strongSelf = self else { return }
       strongSelf.collectionView.reloadData()
     }
+  }
+  
+  private func setupTabAndNavigationBar() {
+    tabBarController?.tabBar.tintColor = .white
+    tabBarController?.tabBar.barTintColor = UIColor.FlickNite.lightGray
+    
+    navigationController?.navigationBar.barTintColor = UIColor.FlickNite.lightGray
+    navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
   }
 }
 
