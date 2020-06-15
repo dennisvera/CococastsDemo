@@ -78,6 +78,7 @@ class MoviesCollectionViewController: UICollectionViewController, Storyboardable
     tabBarController?.tabBar.barTintColor = UIColor.FlickNite.lightGray
     
     // Configure Navigation Bar
+    navigationController?.navigationBar.barStyle = .black
     navigationController?.navigationBar.prefersLargeTitles = true
     navigationController?.navigationBar.barTintColor = UIColor.FlickNite.lightGray
     navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
