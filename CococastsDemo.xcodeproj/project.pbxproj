@@ -18,7 +18,7 @@
 		E1E59421247F022B0095143E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E5941F247F022B0095143E /* LaunchScreen.storyboard */; };
 		E1E5949B24804E740095143E /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E5949A24804E740095143E /* Root.storyboard */; };
 		E1E5949D24804E980095143E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5949C24804E980095143E /* RootViewController.swift */; };
-		E1E594A6248050E00095143E /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594A5248050E00095143E /* MoviesViewController.swift */; };
+		E1E594A6248050E00095143E /* MoviesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594A5248050E00095143E /* MoviesCollectionViewController.swift */; };
 		E1E594A8248051AB0095143E /* Movies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E594A7248051AB0095143E /* Movies.storyboard */; };
 		E1E594AD248053630095143E /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594AC248053630095143E /* FavoritesViewController.swift */; };
 		E1E594AF2480536F0095143E /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E594AE2480536F0095143E /* Favorites.storyboard */; };
@@ -33,7 +33,6 @@
 		E1FF4AC824856E9800FF2FD2 /* FlickNiteAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AC724856E9800FF2FD2 /* FlickNiteAPIClient.swift */; };
 		E1FF4ACB2485906700FF2FD2 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4ACA2485906700FF2FD2 /* MoviesViewModel.swift */; };
 		E1FF4ADD2485AE1F00FF2FD2 /* MoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4ADB2485AE1F00FF2FD2 /* MoviesCollectionViewCell.swift */; };
-		E1FF4ADE2485AE1F00FF2FD2 /* MoviesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1FF4ADC2485AE1F00FF2FD2 /* MoviesCollectionViewCell.xib */; };
 		E1FF4AE02485B03700FF2FD2 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4ADF2485B03700FF2FD2 /* ReusableView.swift */; };
 		E1FF4AE52485B1BB00FF2FD2 /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AE42485B1BB00FF2FD2 /* UICollectionView+Helpers.swift */; };
 		E1FF4AE72485B74800FF2FD2 /* UICollectionViewCell+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AE62485B74800FF2FD2 /* UICollectionViewCell+Helpers.swift */; };
@@ -92,7 +91,7 @@
 		E1E59438247F022B0095143E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E5949A24804E740095143E /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		E1E5949C24804E980095143E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		E1E594A5248050E00095143E /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		E1E594A5248050E00095143E /* MoviesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewController.swift; sourceTree = "<group>"; };
 		E1E594A7248051AB0095143E /* Movies.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movies.storyboard; sourceTree = "<group>"; };
 		E1E594AC248053630095143E /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		E1E594AE2480536F0095143E /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
@@ -107,7 +106,6 @@
 		E1FF4AC724856E9800FF2FD2 /* FlickNiteAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickNiteAPIClient.swift; sourceTree = "<group>"; };
 		E1FF4ACA2485906700FF2FD2 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		E1FF4ADB2485AE1F00FF2FD2 /* MoviesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewCell.swift; sourceTree = "<group>"; };
-		E1FF4ADC2485AE1F00FF2FD2 /* MoviesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesCollectionViewCell.xib; sourceTree = "<group>"; };
 		E1FF4ADF2485B03700FF2FD2 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		E1FF4AE42485B1BB00FF2FD2 /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
 		E1FF4AE62485B74800FF2FD2 /* UICollectionViewCell+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Helpers.swift"; sourceTree = "<group>"; };
@@ -347,7 +345,7 @@
 		E1E594A22480508A0095143E /* Movies */ = {
 			isa = PBXGroup;
 			children = (
-				E1E594A5248050E00095143E /* MoviesViewController.swift */,
+				E1E594A5248050E00095143E /* MoviesCollectionViewController.swift */,
 				E1FF4AC92485904C00FF2FD2 /* View Models */,
 				E1FF4AD82485ADC300FF2FD2 /* Collection View Cells */,
 				E147F521249147EF0034DC77 /* Movie Detail Controller */,
@@ -471,7 +469,6 @@
 			isa = PBXGroup;
 			children = (
 				E1FF4ADB2485AE1F00FF2FD2 /* MoviesCollectionViewCell.swift */,
-				E1FF4ADC2485AE1F00FF2FD2 /* MoviesCollectionViewCell.xib */,
 			);
 			path = "Collection View Cells";
 			sourceTree = "<group>";
@@ -674,7 +671,6 @@
 				E1FF4B002487003300FF2FD2 /* Lato-Regular.ttf in Resources */,
 				E1E5949B24804E740095143E /* Root.storyboard in Resources */,
 				E1E594AF2480536F0095143E /* Favorites.storyboard in Resources */,
-				E1FF4ADE2485AE1F00FF2FD2 /* MoviesCollectionViewCell.xib in Resources */,
 				E1FF4AFF2487003300FF2FD2 /* Lato-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -822,7 +818,7 @@
 				E1E59417247F022A0095143E /* SceneDelegate.swift in Sources */,
 				E1E594D3248168710095143E /* MoviesCoordinator.swift in Sources */,
 				E1FF4B2924882D4100FF2FD2 /* MockClient.swift in Sources */,
-				E1E594A6248050E00095143E /* MoviesViewController.swift in Sources */,
+				E1E594A6248050E00095143E /* MoviesCollectionViewController.swift in Sources */,
 				E1FF4AE52485B1BB00FF2FD2 /* UICollectionView+Helpers.swift in Sources */,
 				E1FF4AC5248565F700FF2FD2 /* Movie.swift in Sources */,
 				E1FF4AF32486A21500FF2FD2 /* MoviePresentable.swift in Sources */,

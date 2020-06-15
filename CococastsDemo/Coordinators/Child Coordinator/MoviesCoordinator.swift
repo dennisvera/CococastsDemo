@@ -58,9 +58,9 @@ class MoviesCoordinator: Coordinator {
     let viewModel = MoviesViewModel(apiClient: apiClient)
     
     // Initialize Now Playing View Controller
-    let moviesViewController = MoviesViewController.instantiate()
+    let moviesCollectionViewController = MoviesCollectionViewController.instantiate()
     // Configure Now Playing View Controller
-    moviesViewController.viewModel = viewModel
+    moviesCollectionViewController.viewModel = viewModel
     
     // Install Handlers
     viewModel.didSelectMovie = { [weak self] movie in
@@ -69,7 +69,7 @@ class MoviesCoordinator: Coordinator {
     }
     
     // Push Photos View Controller Onto Navigation Stack
-    navigationController.pushViewController(moviesViewController, animated: true)
+    navigationController.pushViewController(moviesCollectionViewController, animated: true)
   }
   
   private func showMovie(_ movie: Movie) {

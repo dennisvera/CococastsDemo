@@ -1,5 +1,5 @@
 //
-//  MoviesViewController.swift
+//  MoviesCollectionViewController.swift
 //  CococastsDemo
 //
 //  Created by Dennis Vera on 5/28/20.
@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class MoviesViewController: UIViewController, Storyboardable {
+class MoviesCollectionViewController: UICollectionViewController, Storyboardable {
   
   // MARK: - Storyboardable
   
@@ -17,32 +17,17 @@ class MoviesViewController: UIViewController, Storyboardable {
     return "Movies"
   }
   
-  // MARK: - Outlets
-  
-  @IBOutlet var collectionView: UICollectionView! {
-    didSet {
-      // Configure Collection View
-      collectionView.delegate = self
-      collectionView.dataSource = self
-      collectionView.prefetchDataSource = self
-      collectionView.isPrefetchingEnabled = true
-      collectionView.backgroundColor = UIColor.FlickNite.darkGray
-      collectionView.collectionViewLayout = UICollectionViewFlowLayout()
-      
-      // Register Movie Collection View Cell
-      let xib = UINib(nibName: MoviesCollectionViewCell.nibName, bundle: .main)
-      collectionView.register(xib, forCellWithReuseIdentifier: MoviesCollectionViewCell.reuseIdentifier)
-    }
-  }
-  
   // MARK: - Properties
   
-  private var numberOfItemsInRow = 2
-  private var minimumSpacing: CGFloat = 5
+  private let minimumSpacing: CGFloat = 8.0
   
   var viewModel: MoviesViewModel?
   
-  // MARK: - Initialization
+  // MARK: - Intialization
+  
+  init() {
+    super.init(collectionViewLayout: UICollectionViewFlowLayout())
+  }
   
   required init?(coder: NSCoder) {
     super.init(coder: coder)
@@ -55,22 +40,19 @@ class MoviesViewController: UIViewController, Storyboardable {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-          
+    
     setupViewModel()
+    setupCollectionView()
     setupTabAndNavigationBar()
   }
   
   // MARK: - Helper Methods
   
-  private func setupViewModel() {
-    viewModel?.delegate = self
-
-    // Install Handler
-    viewModel?.moviesDidChange = { [weak self] in
-      // Update Collection View
-      guard let strongSelf = self else { return }
-      strongSelf.collectionView.reloadData()
-    }
+  private func setupCollectionView() {
+    collectionView.prefetchDataSource = self
+    collectionView.isPrefetchingEnabled = true
+    collectionView.backgroundColor = UIColor.FlickNite.darkGray
+    collectionView.contentInset = UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 8)
   }
   
   private func setupTabAndNavigationBar() {
@@ -80,19 +62,30 @@ class MoviesViewController: UIViewController, Storyboardable {
     navigationController?.navigationBar.barTintColor = UIColor.FlickNite.lightGray
     navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
   }
+  
+  private func setupViewModel() {
+    viewModel?.delegate = self
+    
+    // Install Handler
+    viewModel?.moviesDidChange = { [weak self] in
+      // Update Collection View
+      guard let strongSelf = self else { return }
+      strongSelf.collectionView.reloadData()
+    }
+  }
 }
 
-extension MoviesViewController: UICollectionViewDataSource {
+extension MoviesCollectionViewController {
   
-  func numberOfSections(in collectionView: UICollectionView) -> Int {
+  override func numberOfSections(in collectionView: UICollectionView) -> Int {
     return 1
   }
   
-  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return viewModel?.totalCount ?? 0
   }
   
-  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+  override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     // BUG: - the presentable func crashes the app when called on the cell for row at.
     // This started happening after the prefetching implementation.
     // Fetch Presentable
@@ -111,19 +104,30 @@ extension MoviesViewController: UICollectionViewDataSource {
     return cell
   }
   
-  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+  override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     // Notify View Model
     viewModel?.selectMovie(at: indexPath.item)
   }
 }
 
-extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension MoviesCollectionViewController: UICollectionViewDelegateFlowLayout {
   
   func collectionView(_ collectionView: UICollectionView,
                       layout collectionViewLayout: UICollectionViewLayout,
                       sizeForItemAt indexPath: IndexPath) -> CGSize {
-    let width = (Int(view.frame.width) - (numberOfItemsInRow - 1) * 5 - 20) / numberOfItemsInRow
-    return CGSize(width: width, height: 280)
+    
+    let numberOfItemsPerRow: CGFloat = 2
+    let spacingBetweenCells: CGFloat = 8
+    
+    //Amount of total spacing in a row
+    let totalSpacing = (2 * self.minimumSpacing) + ((numberOfItemsPerRow - 1) * spacingBetweenCells)
+    
+    if let collection = self.collectionView {
+      let width = (collection.bounds.width - totalSpacing) / numberOfItemsPerRow
+      return CGSize(width: width, height: 280)
+    } else {
+      return CGSize(width: 0, height: 0)
+    }
   }
   
   func collectionView(_ collectionView: UICollectionView,
@@ -137,16 +141,9 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDelega
                       minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
     return minimumSpacing
   }
-  
-  func collectionView(_ collectionView: UICollectionView,
-                      layout collectionViewLayout: UICollectionViewLayout,
-                      insetForSectionAt section: Int) -> UIEdgeInsets {
-    
-    return .init(top: 10, left: 10, bottom: 10, right: 10)
-  }
 }
 
-extension MoviesViewController: MoviesViewModelDelegate {
+extension MoviesCollectionViewController: MoviesViewModelDelegate {
   
   func onFetchCompleted(with newIndexPathsToReload: [IndexPath]?) {
     guard let newIndexPathsToReload = newIndexPathsToReload else {
@@ -163,7 +160,7 @@ extension MoviesViewController: MoviesViewModelDelegate {
   }
 }
 
-extension MoviesViewController: UICollectionViewDataSourcePrefetching {
+extension MoviesCollectionViewController: UICollectionViewDataSourcePrefetching {
   
   func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
     if indexPaths.contains(where: isLoadingCell) {
@@ -172,7 +169,7 @@ extension MoviesViewController: UICollectionViewDataSourcePrefetching {
   }
 }
 
-private extension MoviesViewController {
+private extension MoviesCollectionViewController {
   
   func isLoadingCell(for indexPath: IndexPath) -> Bool {
     return indexPath.row >= viewModel?.currentCount ?? 0
