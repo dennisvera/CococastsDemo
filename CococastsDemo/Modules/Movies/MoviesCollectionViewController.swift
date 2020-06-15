@@ -19,7 +19,9 @@ class MoviesCollectionViewController: UICollectionViewController, Storyboardable
   
   // MARK: - Properties
   
-  private let minimumSpacing: CGFloat = 8.0
+  private var minimumSpacing: CGFloat = 8
+  private let spacingBetweenCells: CGFloat = 8
+  private var numberOfItemsPerRow: CGFloat = 2
   
   var viewModel: MoviesViewModel?
   
@@ -31,9 +33,6 @@ class MoviesCollectionViewController: UICollectionViewController, Storyboardable
   
   required init?(coder: NSCoder) {
     super.init(coder: coder)
-    
-    // Set Title
-    title = "Movies"
   }
   
   // MARK: - View Life Cycle
@@ -46,9 +45,24 @@ class MoviesCollectionViewController: UICollectionViewController, Storyboardable
     setupTabAndNavigationBar()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    // Set Navigation Bar Title
+    navigationItem.title = "Movies"
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(true)
+    
+    // Remove Navigation Bar Back Button Title
+    self.navigationItem.title = ""
+  }
+
   // MARK: - Helper Methods
   
   private func setupCollectionView() {
+    // Configure Collection View
     collectionView.prefetchDataSource = self
     collectionView.isPrefetchingEnabled = true
     collectionView.backgroundColor = UIColor.FlickNite.darkGray
@@ -56,9 +70,15 @@ class MoviesCollectionViewController: UICollectionViewController, Storyboardable
   }
   
   private func setupTabAndNavigationBar() {
+    // Set Tab Bar Title
+    title = "Movies"
+    
+    // Configure Tab Bar Controller
     tabBarController?.tabBar.tintColor = .white
     tabBarController?.tabBar.barTintColor = UIColor.FlickNite.lightGray
     
+    // Configure Navigation Bar
+    navigationController?.navigationBar.prefersLargeTitles = true
     navigationController?.navigationBar.barTintColor = UIColor.FlickNite.lightGray
     navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
   }
@@ -116,11 +136,8 @@ extension MoviesCollectionViewController: UICollectionViewDelegateFlowLayout {
                       layout collectionViewLayout: UICollectionViewLayout,
                       sizeForItemAt indexPath: IndexPath) -> CGSize {
     
-    let numberOfItemsPerRow: CGFloat = 2
-    let spacingBetweenCells: CGFloat = 8
-    
-    //Amount of total spacing in a row
-    let totalSpacing = (2 * self.minimumSpacing) + ((numberOfItemsPerRow - 1) * spacingBetweenCells)
+    // Set the Total Spacing In a Row
+    let totalSpacing = (2 * minimumSpacing) + ((numberOfItemsPerRow - 1) * spacingBetweenCells)
     
     if let collection = self.collectionView {
       let width = (collection.bounds.width - totalSpacing) / numberOfItemsPerRow

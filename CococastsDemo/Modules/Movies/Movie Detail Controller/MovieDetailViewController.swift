@@ -29,16 +29,23 @@ class MovieDetailViewController: UIViewController, Storyboardable {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // Setup View
     setupView()
-    
-    // Set Title
-    title = viewModel?.title
+    setupNavigationBar()
   }
   
   // MARK: - Helper Methods
   
+  private func setupNavigationBar() {
+    // Set Title
+    title = viewModel?.title
+    
+    navigationItem.largeTitleDisplayMode = .never
+    navigationController?.navigationBar.tintColor = .white
+  }
+  
   private func setupView() {
+    view.backgroundColor = UIColor.FlickNite.darkGray
+    
     guard let viewModel = viewModel else { return }
     
     // Configure Image View
