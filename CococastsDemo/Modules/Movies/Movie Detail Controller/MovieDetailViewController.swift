@@ -14,7 +14,9 @@ class MovieDetailViewController: UIViewController, Storyboardable {
   // MARK: - Outlets
 
   @IBOutlet weak var backdropPosterImageView: UIImageView!
+  @IBOutlet weak var playButtonImageView: UIImageView!
   @IBOutlet weak var detailVIewContainer: UIView!
+  @IBOutlet weak var heartImageView: UIImageView!
   @IBOutlet weak var posterImageView: UIImageView!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var releaseDateLabel: UILabel!
@@ -41,16 +43,15 @@ class MovieDetailViewController: UIViewController, Storyboardable {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
-    // Hide the navigation bar
-//    self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    // Make the navigation bar background clear
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    navigationController?.navigationBar.shadowImage = UIImage()
+    navigationController?.navigationBar.isTranslucent = true
   }
   
   // MARK: - Helper Methods
   
   private func setupNavigationBar() {
-    // Set Title
-    title = viewModel?.title
-    
     navigationItem.largeTitleDisplayMode = .never
     navigationController?.navigationBar.tintColor = .white
   }
@@ -64,12 +65,18 @@ class MovieDetailViewController: UIViewController, Storyboardable {
     backdropPosterImageView.contentMode = .scaleAspectFill
     backdropPosterImageView.sd_setImage(with: URL(string: viewModel.backdropPath ?? ""))
     
+    playButtonImageView.image = #imageLiteral(resourceName: "play_button_icon").withRenderingMode(.alwaysTemplate)
+    playButtonImageView.tintColor = .white
+    
+    heartImageView.image = #imageLiteral(resourceName: "heart_icon").withRenderingMode(.alwaysTemplate)
+    heartImageView.tintColor = .white
+    
     posterImageView.clipsToBounds = true
     posterImageView.layer.cornerRadius = 14
     posterImageView.contentMode = .scaleAspectFit
     posterImageView.sd_setImage(with: URL(string: viewModel.posterPath ?? ""))
     
-    
+    titleLabel.numberOfLines = 2
     titleLabel.attributedText = viewModel.title.toTtitle(color: .white, textAlignment: .left)
     
     releaseDateLabel.attributedText = viewModel.releaseDate.toDetail(color: .white, textAlignment: .left)

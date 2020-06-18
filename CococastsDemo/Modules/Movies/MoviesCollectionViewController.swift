@@ -80,7 +80,7 @@ class MoviesCollectionViewController: UICollectionViewController, Storyboardable
     
     // Configure Navigation Bar
     navigationController?.navigationBar.barStyle = .black
-    navigationController?.navigationBar.prefersLargeTitles = true
+    navigationController?.navigationBar.prefersLargeTitles = false
     navigationController?.navigationBar.barTintColor = UIColor.FlickNite.lightGray
     navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
   }
