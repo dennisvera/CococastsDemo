@@ -16,15 +16,27 @@ struct MovieViewModel {
   
   // MARK: - Public API
   
-  var title: String {
-    return movie.title
-  }
-  
   var posterPath: String? {
     let imageBaseUrl = "https://image.tmdb.org/t/p/w500/"
     let posterPath = movie.posterPath ?? ""
     let movie = imageBaseUrl + posterPath
     return movie
+  }
+  
+  var title: String {
+    return movie.title
+  }
+  
+  var releaseDate: String {
+    return movie.releaseDate
+  }
+  
+  var popularityScore: String {
+    return String(format: "%.0f", movie.popularity) + "%"
+  }
+  
+  var voteCount: String {
+    return "\(movie.voteCount)"
   }
 }
 

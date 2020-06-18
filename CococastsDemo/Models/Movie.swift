@@ -22,11 +22,10 @@ struct Movie: Decodable {
   // MARK: - Properties
   
   let id: Int
-  let video: Bool
   let title: String
   let voteCount: Int
   let overview: String
   let releaseDate: String
-  let voteAverage: Double
   let posterPath: String?
+  let popularity: Double
 }

@@ -108,9 +108,9 @@ extension MoviesCollectionViewController {
   }
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    // BUG: - the presentable func crashes the app when called on the cell for row at.
-    // This started happening after the prefetching implementation.
-    // Fetch Presentable
+    // BUG:
+    // Using the presentable helper method crashes the app after the prefetching implementation was set up.
+    // Using the movies(at:) method does not crash the app. Need to investigate.
     //    guard let presentable = viewModel?.presentable(for: indexPath.item) else { fatalError("No Movies Available.") }
     
     // Dequeue Movie Collection View Cell
