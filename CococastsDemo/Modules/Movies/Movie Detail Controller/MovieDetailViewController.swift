@@ -13,6 +13,7 @@ class MovieDetailViewController: UIViewController, Storyboardable {
   
   // MARK: - Outlets
 
+  @IBOutlet weak var backdropPosterImageView: UIImageView!
   @IBOutlet weak var detailVIewContainer: UIView!
   @IBOutlet weak var posterImageView: UIImageView!
   @IBOutlet weak var titleLabel: UILabel!
@@ -21,7 +22,6 @@ class MovieDetailViewController: UIViewController, Storyboardable {
   @IBOutlet weak var runTimeLabel: UILabel!
   @IBOutlet weak var popularityImageView: UIImageView!
   @IBOutlet weak var popularityScoreLabel: UILabel!
-  
   @IBOutlet weak var voteScoreLabel: UILabel!
   @IBOutlet weak var voteScoreImageView: UIImageView!
   
@@ -38,6 +38,13 @@ class MovieDetailViewController: UIViewController, Storyboardable {
     setupNavigationBar()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    // Hide the navigation bar
+//    self.navigationController?.setNavigationBarHidden(true, animated: animated)
+  }
+  
   // MARK: - Helper Methods
   
   private func setupNavigationBar() {
@@ -49,35 +56,34 @@ class MovieDetailViewController: UIViewController, Storyboardable {
   }
   
   private func setupView() {
-    detailVIewContainer.backgroundColor = UIColor.darkGray
-    
+    detailVIewContainer.backgroundColor = UIColor.FlickNite.lightGray
+        
     guard let viewModel = viewModel else { return }
     
+    backdropPosterImageView.clipsToBounds = true
+    backdropPosterImageView.contentMode = .scaleAspectFill
+    backdropPosterImageView.sd_setImage(with: URL(string: viewModel.backdropPath ?? ""))
+    
     posterImageView.clipsToBounds = true
-    posterImageView.layer.cornerRadius = 8
+    posterImageView.layer.cornerRadius = 14
+    posterImageView.contentMode = .scaleAspectFit
     posterImageView.sd_setImage(with: URL(string: viewModel.posterPath ?? ""))
     
-    titleLabel.textColor = .white
-    titleLabel.text = viewModel.title
     
-    releaseDateLabel.textColor = .white
-    releaseDateLabel.text = "2020"
+    titleLabel.attributedText = viewModel.title.toTtitle(color: .white, textAlignment: .left)
     
-    ratedLabel.textColor = .white
-    ratedLabel.text = "PG"
+    releaseDateLabel.attributedText = viewModel.releaseDate.toDetail(color: .white, textAlignment: .left)
     
-    runTimeLabel.textColor = .white
-    runTimeLabel.text = "133"
+    ratedLabel.attributedText = "PG".toDetail(color: .white, textAlignment: .left)
     
-    popularityImageView.backgroundColor = .white
+    runTimeLabel.attributedText = "133".toDetail(color: .white, textAlignment: .left)
     
-    popularityScoreLabel.textColor = .white
-    popularityScoreLabel.text = viewModel.popularityScore
+    popularityImageView.image = #imageLiteral(resourceName: "popcorn_Icon")
     
-    voteScoreImageView.backgroundColor = .white
+    popularityScoreLabel.attributedText = viewModel.popularityScore.toDetail(color: .white, textAlignment: .left)
     
-    voteScoreLabel.text = viewModel.voteCount
-    voteScoreLabel.textColor = .white
+    voteScoreImageView.image = #imageLiteral(resourceName: "likes_icon")
     
+    voteScoreLabel.attributedText = viewModel.voteCount.toDetail(color: .white, textAlignment: .left)
   }
 }

@@ -23,12 +23,19 @@ struct MovieViewModel {
     return movie
   }
   
+  var backdropPath: String? {
+    let imageBaseUrl = "https://image.tmdb.org/t/p/w500/"
+    let posterPath = movie.backdropPath ?? ""
+    let movie = imageBaseUrl + posterPath
+    return movie
+  }
+  
   var title: String {
     return movie.title
   }
   
   var releaseDate: String {
-    return movie.releaseDate
+    return String(movie.releaseDate.prefix(4))
   }
   
   var popularityScore: String {
@@ -36,7 +43,7 @@ struct MovieViewModel {
   }
   
   var voteCount: String {
-    return "\(movie.voteCount)"
+    return String(movie.voteCount)
   }
 }
 
