@@ -74,22 +74,26 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rmm-Ty-skf">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fhi-Fq-a2f">
-                                                <rect key="frame" x="177" y="140" width="60" height="60"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QML-Lx-ZWX">
+                                                <rect key="frame" x="177" y="130" width="60" height="60"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="YE8-GX-BGn"/>
-                                                    <constraint firstAttribute="width" constant="60" id="iLw-Nz-aNM"/>
+                                                    <constraint firstAttribute="width" constant="60" id="47Y-ET-6Jt"/>
+                                                    <constraint firstAttribute="height" constant="60" id="tFw-xK-nlK"/>
                                                 </constraints>
-                                            </imageView>
+                                                <state key="normal" title="Button" image="play_button_icon"/>
+                                                <connections>
+                                                    <action selector="playButton:" destination="frB-m1-9y5" eventType="touchUpInside" id="H0w-uA-8i7"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Rmm-Ty-skf" secondAttribute="trailing" id="Ac8-Gi-KEH"/>
+                                            <constraint firstItem="QML-Lx-ZWX" firstAttribute="centerX" secondItem="fDZ-dF-sgz" secondAttribute="centerX" id="B3K-s2-8IB"/>
                                             <constraint firstAttribute="height" constant="300" id="FPw-tH-Mv0"/>
                                             <constraint firstItem="Rmm-Ty-skf" firstAttribute="top" secondItem="fDZ-dF-sgz" secondAttribute="top" id="I24-NY-JGM"/>
-                                            <constraint firstItem="Fhi-Fq-a2f" firstAttribute="centerX" secondItem="fDZ-dF-sgz" secondAttribute="centerX" id="JXB-nJ-kat"/>
                                             <constraint firstItem="Rmm-Ty-skf" firstAttribute="leading" secondItem="fDZ-dF-sgz" secondAttribute="leading" id="OF0-ye-Ci6"/>
+                                            <constraint firstItem="QML-Lx-ZWX" firstAttribute="centerY" secondItem="fDZ-dF-sgz" secondAttribute="centerY" constant="10" id="TTM-Ye-41x"/>
                                             <constraint firstAttribute="bottom" secondItem="Rmm-Ty-skf" secondAttribute="bottom" id="pyH-vt-V1c"/>
-                                            <constraint firstItem="Fhi-Fq-a2f" firstAttribute="centerY" secondItem="fDZ-dF-sgz" secondAttribute="centerY" constant="20" id="tsM-bC-WlM"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F2Y-g6-zLE" userLabel="Details View">
@@ -224,7 +228,7 @@
                         <outlet property="backdropPosterImageView" destination="Rmm-Ty-skf" id="v9Y-Ai-Bep"/>
                         <outlet property="detailVIewContainer" destination="F2Y-g6-zLE" id="MDi-Wk-kaz"/>
                         <outlet property="heartImageView" destination="faR-Pa-HWJ" id="9jG-Zb-wGN"/>
-                        <outlet property="playButtonImageView" destination="Fhi-Fq-a2f" id="jNV-KT-jxa"/>
+                        <outlet property="playButton" destination="QML-Lx-ZWX" id="iNU-X3-Nes"/>
                         <outlet property="popularityImageView" destination="y3x-PG-VD2" id="siI-gZ-nao"/>
                         <outlet property="popularityScoreLabel" destination="zzk-GG-9Ld" id="rMg-mA-8f0"/>
                         <outlet property="posterImageView" destination="rXv-ek-fXT" id="qki-3v-H41"/>
@@ -242,6 +246,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="play_button_icon" width="100" height="100"/>
         <namedColor name="darkGray">
             <color red="0.11372549019607843" green="0.10980392156862745" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

@@ -8,13 +8,14 @@
 
 import UIKit
 import SDWebImage
+import AVKit
 
 class MovieDetailViewController: UIViewController, Storyboardable {
   
   // MARK: - Outlets
 
   @IBOutlet weak var backdropPosterImageView: UIImageView!
-  @IBOutlet weak var playButtonImageView: UIImageView!
+  @IBOutlet weak var playButton: UIButton!
   @IBOutlet weak var detailVIewContainer: UIView!
   @IBOutlet weak var heartImageView: UIImageView!
   @IBOutlet weak var posterImageView: UIImageView!
@@ -65,8 +66,9 @@ class MovieDetailViewController: UIViewController, Storyboardable {
     backdropPosterImageView.contentMode = .scaleAspectFill
     backdropPosterImageView.sd_setImage(with: URL(string: viewModel.backdropPath ?? ""))
     
-    playButtonImageView.image = #imageLiteral(resourceName: "play_button_icon").withRenderingMode(.alwaysTemplate)
-    playButtonImageView.tintColor = .white
+    let playButtonImage = #imageLiteral(resourceName: "play_button_icon").withRenderingMode(.alwaysTemplate)
+    playButton.setImage(playButtonImage, for: .normal)
+    playButton.tintColor = .white
     
     heartImageView.image = #imageLiteral(resourceName: "heart_icon").withRenderingMode(.alwaysTemplate)
     heartImageView.tintColor = .white
@@ -93,4 +95,22 @@ class MovieDetailViewController: UIViewController, Storyboardable {
     
     voteScoreLabel.attributedText = viewModel.voteCount.toDetail(color: .white, textAlignment: .left)
   }
+  
+  // MARK: - Actions
+  
+  @IBAction func playButton(_ sender: Any) {
+    guard let videoURL = URL(string: "https://www.youtube.com/embed/2B0RpUGss2c") else { fatalError() }
+
+    //2
+    let player = AVPlayer(url: videoURL)
+
+    let playerViewController = AVPlayerViewController()
+    playerViewController.player = player
+
+    present(playerViewController, animated: true) {
+      player.play()
+    }
+    
+  }
+  
 }
