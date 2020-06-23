@@ -13,6 +13,7 @@ class MoviesCoordinator: Coordinator {
   // MARK: - Properties
   
   private let navigationController = UINavigationController()
+  private let apiClient = FlickNiteAPIClient()
   
   // MARK: - Public API
   
@@ -51,9 +52,6 @@ class MoviesCoordinator: Coordinator {
   // MARK: - Helper Methods
   
   private func showMovies() {
-    // Initialize API Client
-    let apiClient = FlickNiteAPIClient()
-    
     // Initialize Now Playing View Model
     let viewModel = MoviesViewModel(apiClient: apiClient)
     
@@ -75,7 +73,7 @@ class MoviesCoordinator: Coordinator {
   
   private func showMovie(_ movie: Movie) {
     // Initialize Movie View Model
-    let viewModel = MovieViewModel(movie: movie)
+    let viewModel = MovieViewModel(apiClient: apiClient, movie: movie)
     
     // Initialize Movie Detail View Controller
     let movieDetailViewController = MovieDetailViewController.instantiate()
@@ -84,18 +82,20 @@ class MoviesCoordinator: Coordinator {
     movieDetailViewController.viewModel = viewModel
     
     // Install Handlers
-    viewModel.didShowWebView = { [weak self] in
+    viewModel.didTapMovieVideoButton = { [weak self] videoId in
       guard let strongSelf = self else { return }
-      strongSelf.showWebView()
+      strongSelf.showMovieTrailer(with: videoId)
     }
     
     // Push Movie Detail View Controller Onto Navigation Stack
     navigationController.pushViewController(movieDetailViewController, animated: true)
   }
   
-  private func showWebView() {
+  private func showMovieTrailer(with videoId: String) {
     // Initialize Web View Controller
     let webViewController = WebViewController.instantiate()
+    
+    webViewController.videoId = videoId
     
     // Push Web View Controller Onto Navigation Stack
     navigationController.pushViewController(webViewController, animated: true)

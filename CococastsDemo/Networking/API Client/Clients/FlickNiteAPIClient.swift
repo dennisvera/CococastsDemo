@@ -23,6 +23,12 @@ final class FlickNiteAPIClient: APIClient {
     fetchGenericJsonData(with: urlString, completion: completion)
   }
   
+  func fechMovieTrailer(with id: Int, completion: @escaping (Result<VideoResponse, APIError>) -> Void) {
+    let urlString = "https://api.themoviedb.org/3/movie/\(id)/videos?api_key=2631ea46e7edd7894cf3eaee7d263667"
+    
+    fetchGenericJsonData(with: urlString, completion: completion)
+  }
+  
   // MARK: - Helper Method
   
   private func fetchGenericJsonData<T: Decodable>(with urlString: String, completion: @escaping (Result<T, APIError>) -> Void) {

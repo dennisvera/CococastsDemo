@@ -12,17 +12,23 @@ final class MovieViewModel {
   
   // MARK: - Properties
   
-  let movie: Movie?
+  private let movie: Movie?
+  private let apiClient: FlickNiteAPIClient
   
-  var didShowWebView: (() -> Void)?
+  private var videoId: String?
+  
+  var didTapMovieVideoButton: ((String) -> Void)?
   
   // MARK: Initialization
   
-  init(movie: Movie) {
+  init(apiClient: FlickNiteAPIClient, movie: Movie) {
+    self.apiClient = apiClient
     self.movie = movie
+    
+    fetchMovieTrailer()
   }
   
-  // MARK: - Public API
+  // MARK: - Public API Properties
   
   var posterPath: String? {
     let imageBaseUrl = "https://image.tmdb.org/t/p/w500/"
@@ -54,10 +60,27 @@ final class MovieViewModel {
     return String(movie?.voteCount ?? 0)
   }
   
+  // MARK: - Helper Methods
+  
+  private func fetchMovieTrailer() {
+    guard let movie = movie else { return }
+
+    apiClient.fechMovieTrailer(with: movie.id) { [weak self] result in
+      guard let strongSelf = self else { return }
+
+      switch result {
+      case .success(let movie):
+        strongSelf.videoId = movie.results[0].key
+      case .failure(let error):
+        print(error)
+      }
+    }
+  }
+  
   // MARK: - Public API Methods
   
-  func showWebView() {
-    didShowWebView?()
+  func showMovieTrailer() {
+    didTapMovieVideoButton?(videoId ?? "")
   }
 }
 

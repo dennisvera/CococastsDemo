@@ -49,6 +49,13 @@ class MovieDetailViewController: UIViewController, Storyboardable {
     navigationController?.navigationBar.isTranslucent = true
   }
   
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(true)
+    
+    // Remove Navigation Bar Back Button Title
+    self.navigationItem.title = ""
+  }
+  
   // MARK: - Helper Methods
   
   private func setupNavigationBar() {
@@ -99,6 +106,6 @@ class MovieDetailViewController: UIViewController, Storyboardable {
   
   @IBAction func playButton(_ sender: Any) {
     // Notify View Model
-    viewModel?.showWebView()
+    viewModel?.showMovieTrailer()
   }
 }
