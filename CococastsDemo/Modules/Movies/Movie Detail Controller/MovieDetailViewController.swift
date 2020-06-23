@@ -8,7 +8,6 @@
 
 import UIKit
 import SDWebImage
-import AVKit
 
 class MovieDetailViewController: UIViewController, Storyboardable {
   
@@ -99,18 +98,7 @@ class MovieDetailViewController: UIViewController, Storyboardable {
   // MARK: - Actions
   
   @IBAction func playButton(_ sender: Any) {
-    guard let videoURL = URL(string: "https://www.youtube.com/embed/2B0RpUGss2c") else { fatalError() }
-
-    //2
-    let player = AVPlayer(url: videoURL)
-
-    let playerViewController = AVPlayerViewController()
-    playerViewController.player = player
-
-    present(playerViewController, animated: true) {
-      player.play()
-    }
-    
+    // Notify View Model
+    viewModel?.showWebView()
   }
-  
 }

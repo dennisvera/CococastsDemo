@@ -59,6 +59,7 @@ class MoviesCoordinator: Coordinator {
     
     // Initialize Now Playing View Controller
     let moviesCollectionViewController = MoviesCollectionViewController.instantiate()
+    
     // Configure Now Playing View Controller
     moviesCollectionViewController.viewModel = viewModel
     
@@ -82,7 +83,21 @@ class MoviesCoordinator: Coordinator {
     // Configure Movie Detail View Controller
     movieDetailViewController.viewModel = viewModel
     
+    // Install Handlers
+    viewModel.didShowWebView = { [weak self] in
+      guard let strongSelf = self else { return }
+      strongSelf.showWebView()
+    }
+    
     // Push Movie Detail View Controller Onto Navigation Stack
     navigationController.pushViewController(movieDetailViewController, animated: true)
+  }
+  
+  private func showWebView() {
+    // Initialize Web View Controller
+    let webViewController = WebViewController.instantiate()
+    
+    // Push Web View Controller Onto Navigation Stack
+    navigationController.pushViewController(webViewController, animated: true)
   }
 }
