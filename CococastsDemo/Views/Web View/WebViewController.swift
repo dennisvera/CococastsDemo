@@ -9,12 +9,13 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController, Storyboardable {
+class WebViewController: UIViewController, Storyboardable, WKNavigationDelegate {
   
   // MARK: - Outlets
-    
+  
   @IBOutlet weak var webView: WKWebView!
-    
+  @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
+  
   // MARK: - Properties
   
   var videoId: String?
@@ -38,7 +39,7 @@ class WebViewController: UIViewController, Storyboardable {
     // Configure Web View
     webView.isOpaque = false
     webView.clipsToBounds = true
-    webView.contentMode = .scaleAspectFit
+    webView.navigationDelegate = self
     webView.backgroundColor = UIColor.FlickNite.darkGray
   }
   
@@ -46,5 +47,15 @@ class WebViewController: UIViewController, Storyboardable {
     guard let videoId = videoId else { return }
     guard let videoURL = URL(string: youTubeEmbedString + videoId) else { fatalError() }
     webView.load(URLRequest(url: videoURL))
+  }
+  
+  func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+    // Animate Activity Indicator View
+    activityIndicatorView.startAnimating()
+  }
+  
+  func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+    activityIndicatorView.stopAnimating()
+    activityIndicatorView.isHidden = true
   }
 }

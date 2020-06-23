@@ -263,9 +263,14 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="HhI-Dq-Qn1">
+                                <rect key="frame" x="188.5" y="215.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="HhI-Dq-Qn1" firstAttribute="centerY" secondItem="urx-o8-B3q" secondAttribute="centerY" id="2eU-uo-Kal"/>
+                            <constraint firstItem="HhI-Dq-Qn1" firstAttribute="centerX" secondItem="urx-o8-B3q" secondAttribute="centerX" id="5wb-uY-GLq"/>
                             <constraint firstItem="urx-o8-B3q" firstAttribute="top" secondItem="g28-9L-y8E" secondAttribute="top" constant="20" id="DB4-sh-gAJ"/>
                             <constraint firstItem="g28-9L-y8E" firstAttribute="trailing" secondItem="urx-o8-B3q" secondAttribute="trailing" id="EbV-Le-2PZ"/>
                             <constraint firstItem="urx-o8-B3q" firstAttribute="leading" secondItem="g28-9L-y8E" secondAttribute="leading" id="hWM-sr-1in"/>
@@ -273,6 +278,7 @@
                         <viewLayoutGuide key="safeArea" id="g28-9L-y8E"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="HhI-Dq-Qn1" id="iqX-iE-Yh3"/>
                         <outlet property="webView" destination="urx-o8-B3q" id="LGX-mY-PIr"/>
                     </connections>
                 </viewController>
