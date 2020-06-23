@@ -18,13 +18,13 @@ final class FlickNiteAPIClient: APIClient {
   // MARK: - Public API
   
   func fetchMovies(pageIndex: Int, completion: @escaping (Result<MovieResponse, APIError>) -> Void) {
-    guard let urlString = API.getMovies(pageIndex: pageIndex).url?.absoluteString else { return }
+    guard let urlString = APIEndpoint.getMovies(pageIndex: pageIndex).url?.absoluteString else { return }
     
     fetchGenericJsonData(with: urlString, completion: completion)
   }
   
   func fechMovieTrailer(with id: Int, completion: @escaping (Result<VideoResponse, APIError>) -> Void) {
-    let urlString = "https://api.themoviedb.org/3/movie/\(id)/videos?api_key=2631ea46e7edd7894cf3eaee7d263667"
+    guard let urlString = APIEndpoint.getMovieVideo(id: id).url?.absoluteString else { return }
     
     fetchGenericJsonData(with: urlString, completion: completion)
   }
