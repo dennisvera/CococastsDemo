@@ -16,7 +16,7 @@ class MovieDetailViewController: UIViewController, Storyboardable {
   @IBOutlet weak var backdropPosterImageView: UIImageView!
   @IBOutlet weak var playButton: UIButton!
   
-  @IBOutlet weak var detailVIewContainer: UIView!
+  @IBOutlet weak var detailViewContainer: UIView!
   @IBOutlet weak var heartImageView: UIImageView!
   @IBOutlet weak var posterImageView: UIImageView!
   @IBOutlet weak var titleLabel: UILabel!
@@ -28,9 +28,8 @@ class MovieDetailViewController: UIViewController, Storyboardable {
   @IBOutlet weak var voteScoreLabel: UILabel!
   @IBOutlet weak var voteScoreImageView: UIImageView!
   
-  @IBOutlet weak var synopsisContainerView: UIView!
+  @IBOutlet weak var synopsisTextView: UITextView!
   @IBOutlet weak var synopsisTitleLabel: UILabel!
-  @IBOutlet weak var synopsisLabel: UILabel!
   
   // MARK: - Properties
   
@@ -73,7 +72,7 @@ class MovieDetailViewController: UIViewController, Storyboardable {
   }
   
   private func setupView() {
-    detailVIewContainer.backgroundColor = UIColor.FlickNite.mediumGray
+    detailViewContainer.backgroundColor = UIColor.FlickNite.mediumGray
     
     guard let viewModel = viewModel else { return }
     
@@ -116,11 +115,12 @@ class MovieDetailViewController: UIViewController, Storyboardable {
     voteScoreLabel.attributedText = viewModel.voteCount.toDetail(color: UIColor.FlickNite.white,
                                                                  textAlignment: .left)
     
-    synopsisContainerView.backgroundColor = UIColor.FlickNite.darkGray
     synopsisTitleLabel.attributedText? = synopsisTitle.toSubtitleBold(color: UIColor.FlickNite.white,
                                                                       textAlignment: .left)
-    synopsisLabel.attributedText = viewModel.synopsis.toSubtitle(color: UIColor.FlickNite.lightGray,
-                                                                 textAlignment: .left)
+    
+    synopsisTextView.backgroundColor = UIColor.FlickNite.darkGray
+    synopsisTextView.attributedText = viewModel.synopsis.toSubtitle(color: UIColor.FlickNite.lightGray,
+                                                                    textAlignment: .left)
   }
   
   // MARK: - Actions
