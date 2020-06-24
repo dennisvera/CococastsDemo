@@ -14,7 +14,8 @@ final class MovieViewModel {
   
   private let movie: Movie?
   private let apiClient: FlickNiteAPIClient
-  
+  private let imageBaseUrl = "https://image.tmdb.org/t/p/w500/"
+
   private var videoId: String?
   
   var didTapMovieVideoButton: ((String) -> Void)?
@@ -31,14 +32,12 @@ final class MovieViewModel {
   // MARK: - Public API Properties
   
   var posterPath: String? {
-    let imageBaseUrl = "https://image.tmdb.org/t/p/w500/"
     let posterPath = movie?.posterPath ?? ""
     let movie = imageBaseUrl + posterPath
     return movie
   }
   
   var backdropPath: String? {
-    let imageBaseUrl = "https://image.tmdb.org/t/p/w500/"
     let posterPath = movie?.backdropPath ?? ""
     let movie = imageBaseUrl + posterPath
     return movie
@@ -58,6 +57,10 @@ final class MovieViewModel {
   
   var voteCount: String {
     return String(movie?.voteCount ?? 0)
+  }
+  
+  var synopsis: String {
+    return movie?.overview ?? ""
   }
   
   // MARK: - Helper Methods

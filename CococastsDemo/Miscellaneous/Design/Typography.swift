@@ -21,6 +21,15 @@ extension String {
       .build()
   }
   
+  func toSubtitleBold(color: UIColor = .black, textAlignment: NSTextAlignment = .center) -> NSAttributedString {
+    return StringBuilder(string: self)
+      .size(17.0)
+      .color(color)
+      .fontName(.latoBold)
+      .textAlignment(textAlignment)
+      .build()
+  }
+  
   func toSubtitle(color: UIColor = .black, textAlignment: NSTextAlignment = .center) -> NSAttributedString {
     return StringBuilder(string: self)
       .size(17.0)

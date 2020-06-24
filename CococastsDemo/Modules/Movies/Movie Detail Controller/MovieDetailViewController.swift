@@ -12,9 +12,10 @@ import SDWebImage
 class MovieDetailViewController: UIViewController, Storyboardable {
   
   // MARK: - Outlets
-
+  
   @IBOutlet weak var backdropPosterImageView: UIImageView!
   @IBOutlet weak var playButton: UIButton!
+  
   @IBOutlet weak var detailVIewContainer: UIView!
   @IBOutlet weak var heartImageView: UIImageView!
   @IBOutlet weak var posterImageView: UIImageView!
@@ -27,7 +28,13 @@ class MovieDetailViewController: UIViewController, Storyboardable {
   @IBOutlet weak var voteScoreLabel: UILabel!
   @IBOutlet weak var voteScoreImageView: UIImageView!
   
+  @IBOutlet weak var synopsisContainerView: UIView!
+  @IBOutlet weak var synopsisTitleLabel: UILabel!
+  @IBOutlet weak var synopsisLabel: UILabel!
+  
   // MARK: - Properties
+  
+  private let synopsisTitle = "Synopsis"
   
   var viewModel: MovieViewModel?
   
@@ -54,18 +61,20 @@ class MovieDetailViewController: UIViewController, Storyboardable {
     
     // Remove Navigation Bar Back Button Title
     self.navigationItem.title = ""
+    
+    navigationController?.navigationBar.isTranslucent = false
   }
   
   // MARK: - Helper Methods
   
   private func setupNavigationBar() {
     navigationItem.largeTitleDisplayMode = .never
-    navigationController?.navigationBar.tintColor = .white
+    navigationController?.navigationBar.tintColor = UIColor.FlickNite.white
   }
   
   private func setupView() {
-    detailVIewContainer.backgroundColor = UIColor.FlickNite.lightGray
-        
+    detailVIewContainer.backgroundColor = UIColor.FlickNite.mediumGray
+    
     guard let viewModel = viewModel else { return }
     
     backdropPosterImageView.clipsToBounds = true
@@ -74,10 +83,10 @@ class MovieDetailViewController: UIViewController, Storyboardable {
     
     let playButtonImage = #imageLiteral(resourceName: "play_button_icon").withRenderingMode(.alwaysTemplate)
     playButton.setImage(playButtonImage, for: .normal)
-    playButton.tintColor = .white
+    playButton.tintColor = UIColor.FlickNite.white
     
     heartImageView.image = #imageLiteral(resourceName: "heart_icon").withRenderingMode(.alwaysTemplate)
-    heartImageView.tintColor = .white
+    heartImageView.tintColor = UIColor.FlickNite.white
     
     posterImageView.clipsToBounds = true
     posterImageView.layer.cornerRadius = 14
@@ -85,21 +94,33 @@ class MovieDetailViewController: UIViewController, Storyboardable {
     posterImageView.sd_setImage(with: URL(string: viewModel.posterPath ?? ""))
     
     titleLabel.numberOfLines = 2
-    titleLabel.attributedText = viewModel.title.toTtitle(color: .white, textAlignment: .left)
+    titleLabel.attributedText = viewModel.title.toTtitle(color: UIColor.FlickNite.white,
+                                                         textAlignment: .left)
     
-    releaseDateLabel.attributedText = viewModel.releaseDate.toDetail(color: .white, textAlignment: .left)
+    releaseDateLabel.attributedText = viewModel.releaseDate.toSubtitle(color: UIColor.FlickNite.lightGray,
+                                                                       textAlignment: .left)
     
-    ratedLabel.attributedText = "PG".toDetail(color: .white, textAlignment: .left)
+    ratedLabel.attributedText = "PG".toSubtitle(color: UIColor.FlickNite.lightGray,
+                                                textAlignment: .left)
     
-    runTimeLabel.attributedText = "133".toDetail(color: .white, textAlignment: .left)
+    runTimeLabel.attributedText = "133".toSubtitle(color: UIColor.FlickNite.lightGray,
+                                                   textAlignment: .left)
     
     popularityImageView.image = #imageLiteral(resourceName: "popcorn_Icon")
     
-    popularityScoreLabel.attributedText = viewModel.popularityScore.toDetail(color: .white, textAlignment: .left)
+    popularityScoreLabel.attributedText = viewModel.popularityScore.toDetail(color: UIColor.FlickNite.white,
+                                                                             textAlignment: .left)
     
     voteScoreImageView.image = #imageLiteral(resourceName: "likes_icon")
     
-    voteScoreLabel.attributedText = viewModel.voteCount.toDetail(color: .white, textAlignment: .left)
+    voteScoreLabel.attributedText = viewModel.voteCount.toDetail(color: UIColor.FlickNite.white,
+                                                                 textAlignment: .left)
+    
+    synopsisContainerView.backgroundColor = UIColor.FlickNite.darkGray
+    synopsisTitleLabel.attributedText? = synopsisTitle.toSubtitleBold(color: UIColor.FlickNite.white,
+                                                                      textAlignment: .left)
+    synopsisLabel.attributedText = viewModel.synopsis.toSubtitle(color: UIColor.FlickNite.lightGray,
+                                                                 textAlignment: .left)
   }
   
   // MARK: - Actions
