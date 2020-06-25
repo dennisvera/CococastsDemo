@@ -23,6 +23,5 @@ extension UIColor {
     static let darkGray = UIColor(named: "darkGray")!
     
     static let red = UIColor(named: "red")!
-
   }
 }
