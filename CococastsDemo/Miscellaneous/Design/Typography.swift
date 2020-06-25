@@ -121,6 +121,9 @@ final class StringBuilder {
     // Configure Paragraph Style
     paragraphStyle.alignment = textAlignment
     
+    // Set Paragraph Style Line Spacing
+    paragraphStyle.lineSpacing = 4
+    
     // Define Attributes
     let attributes: [NSAttributedString.Key: Any] = [
       .foregroundColor: color,
