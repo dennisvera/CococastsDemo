@@ -15,7 +15,7 @@ class MoviesCollectionViewCell: UICollectionViewCell {
   @IBOutlet private var movieImageView: UIImageView! {
     didSet {
       movieImageView.clipsToBounds = true
-      movieImageView.layer.cornerRadius = 12
+      movieImageView.layer.cornerRadius = 16
       movieImageView.contentMode = .scaleAspectFit
     }
   }
