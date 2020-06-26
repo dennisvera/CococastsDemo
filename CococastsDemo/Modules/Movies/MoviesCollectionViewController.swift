@@ -20,10 +20,8 @@ class MoviesCollectionViewController: UICollectionViewController, Storyboardable
   // MARK: - Properties
   
   private let viewTitle = "Movies"
-  private let minimumSpacing: CGFloat = 8
-  private let spacingBetweenCells: CGFloat = 8
-  private let numberOfItemsPerRow: CGFloat = 2
-  
+  private let minimumSpacing: CGFloat = 10.0
+
   var viewModel: MoviesViewModel?
   
   // MARK: - Intialization
@@ -66,8 +64,7 @@ class MoviesCollectionViewController: UICollectionViewController, Storyboardable
     // Configure Collection View
     collectionView.prefetchDataSource = self
     collectionView.isPrefetchingEnabled = true
-    collectionView.backgroundColor = UIColor.FlickNite.darkGray
-    collectionView.contentInset = UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 8)
+    collectionView.backgroundColor = UIColor.FlickNite.mediumGray
   }
   
   private func setupTabAndNavigationBar() {
@@ -76,12 +73,12 @@ class MoviesCollectionViewController: UICollectionViewController, Storyboardable
     
     // Configure Tab Bar Controller
     tabBarController?.tabBar.tintColor = UIColor.FlickNite.white
-    tabBarController?.tabBar.barTintColor = UIColor.FlickNite.mediumGray
+    tabBarController?.tabBar.barTintColor = UIColor.FlickNite.darkGray
     
     // Configure Navigation Bar
     navigationController?.navigationBar.barStyle = .black
     navigationController?.navigationBar.prefersLargeTitles = false
-    navigationController?.navigationBar.barTintColor = UIColor.FlickNite.mediumGray
+    navigationController?.navigationBar.barTintColor = UIColor.FlickNite.darkGray
     navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.FlickNite.white]
   }
   
@@ -138,8 +135,9 @@ extension MoviesCollectionViewController: UICollectionViewDelegateFlowLayout {
                       layout collectionViewLayout: UICollectionViewLayout,
                       sizeForItemAt indexPath: IndexPath) -> CGSize {
     
-    // Set the Total Spacing In a Row
-    let totalSpacing = (2 * minimumSpacing) + ((numberOfItemsPerRow - 1) * spacingBetweenCells)
+    let numberOfItemsPerRow: CGFloat = 2
+    
+    let totalSpacing = (2 * minimumSpacing) + ((numberOfItemsPerRow - 1) * minimumSpacing)
     
     if let collection = self.collectionView {
       let width = (collection.bounds.width - totalSpacing) / numberOfItemsPerRow
@@ -148,18 +146,25 @@ extension MoviesCollectionViewController: UICollectionViewDelegateFlowLayout {
       return CGSize(width: 0, height: 0)
     }
   }
-  
-  func collectionView(_ collectionView: UICollectionView,
-                      layout collectionViewLayout: UICollectionViewLayout,
-                      minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    return minimumSpacing
-  }
-  
-  func collectionView(_ collectionView: UICollectionView,
-                      layout collectionViewLayout: UICollectionViewLayout,
-                      minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-    return minimumSpacing
-  }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+      return minimumSpacing + 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+      return minimumSpacing
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+
+      return .init(top: 12, left: 10, bottom: 10, right: 10)
+    }
 }
 
 extension MoviesCollectionViewController: MoviesViewModelDelegate {
