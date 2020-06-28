@@ -14,12 +14,12 @@ class MoviesCollectionViewController: UICollectionViewController, Storyboardable
   // MARK: - Storyboardable
   
   static var storyboardName: String {
-    return "Movies"
+    return Strings.moviesTitle
   }
   
   // MARK: - Properties
   
-  private let viewTitle = "Movies"
+  private let moviesTitle = Strings.moviesTitle
   private let minimumSpacing: CGFloat = 10.0
 
   var viewModel: MoviesViewModel?
@@ -48,7 +48,7 @@ class MoviesCollectionViewController: UICollectionViewController, Storyboardable
     super.viewWillAppear(animated)
     
     // Set Navigation Bar Title
-    navigationItem.title = viewTitle
+    navigationItem.title = moviesTitle
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -69,7 +69,7 @@ class MoviesCollectionViewController: UICollectionViewController, Storyboardable
   
   private func setupTabAndNavigationBar() {
     // Set Tab Bar Title
-    title = viewTitle
+    title = moviesTitle
     
     // Configure Tab Bar Controller
     tabBarController?.tabBar.tintColor = UIColor.FlickNite.white

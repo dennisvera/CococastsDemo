@@ -33,9 +33,9 @@ class MovieDetailViewController: UIViewController, Storyboardable {
   
   // MARK: - Properties
   
-  private let synopsisTitle = "Synopsis"
+  private let synopsisTitle = Strings.synopsisTitle
   
-  var viewModel: MovieViewModel?
+  var viewModel: MovieDetailViewModel?
   
   // MARK: - View Life Cycle
   

@@ -1,5 +1,5 @@
 //
-//  MovieViewModel.swift
+//  MovieDetailViewModel.swift
 //  CococastsDemo
 //
 //  Created by Dennis Vera on 6/11/20.
@@ -8,17 +8,16 @@
 
 import Foundation
 
-final class MovieViewModel {
+final class MovieDetailViewModel {
   
   // MARK: - Properties
   
   private let movie: Movie?
+  private var video: [Video] = []
   private let apiClient: FlickNiteAPIClient
-  private let imageBaseUrl = "https://image.tmdb.org/t/p/w500/"
-
-  private var videoId: String?
+  private let imageBaseUrl = Strings.imageBaseUrl
   
-  var didTapMovieVideoButton: ((String) -> Void)?
+  var didTapPlayButton: ((String) -> Void)?
   
   // MARK: Initialization
   
@@ -41,6 +40,10 @@ final class MovieViewModel {
     let posterPath = movie?.backdropPath ?? ""
     let movie = imageBaseUrl + posterPath
     return movie
+  }
+  
+  var videoId: String {
+    return video.first?.key ?? ""
   }
   
   var title: String {
@@ -73,7 +76,7 @@ final class MovieViewModel {
 
       switch result {
       case .success(let movie):
-        strongSelf.videoId = movie.results[0].key
+        strongSelf.video.append(contentsOf: movie.results)
       case .failure(let error):
         print(error)
       }
@@ -83,8 +86,8 @@ final class MovieViewModel {
   // MARK: - Public API Methods
   
   func showMovieTrailer() {
-    didTapMovieVideoButton?(videoId ?? "")
+    didTapPlayButton?(videoId)
   }
 }
 
-extension MovieViewModel: MoviePresentable {}
+extension MovieDetailViewModel: MoviePresentable {}

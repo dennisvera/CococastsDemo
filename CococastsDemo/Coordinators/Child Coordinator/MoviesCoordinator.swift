@@ -73,7 +73,7 @@ class MoviesCoordinator: Coordinator {
   
   private func showMovie(_ movie: Movie) {
     // Initialize Movie View Model
-    let viewModel = MovieViewModel(apiClient: apiClient, movie: movie)
+    let viewModel = MovieDetailViewModel(apiClient: apiClient, movie: movie)
     
     // Initialize Movie Detail View Controller
     let movieDetailViewController = MovieDetailViewController.instantiate()
@@ -82,7 +82,7 @@ class MoviesCoordinator: Coordinator {
     movieDetailViewController.viewModel = viewModel
     
     // Install Handlers
-    viewModel.didTapMovieVideoButton = { [weak self] videoId in
+    viewModel.didTapPlayButton = { [weak self] videoId in
       guard let strongSelf = self else { return }
       strongSelf.showMovieTrailer(with: videoId)
     }

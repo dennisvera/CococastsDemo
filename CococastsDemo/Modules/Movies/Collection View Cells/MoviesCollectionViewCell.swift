@@ -34,7 +34,7 @@ class MoviesCollectionViewCell: UICollectionViewCell {
   
   func configure(with presentable: MoviePresentable?) {
     // Configure Image View
-    let imageBaseUrl = "https://image.tmdb.org/t/p/w500/"
+    let imageBaseUrl = Strings.imageBaseUrl
     guard let posterPath = presentable?.posterPath else { return }
     guard let posterUrl = URL(string: imageBaseUrl + posterPath) else { return }
     let thumbnailSize = CGSize(width: 300, height: 300)
